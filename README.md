@@ -4,6 +4,8 @@ An evidence-backed IT rollout case study showing Project Coordinator, PMO Analys
 
 [![CI](https://github.com/iamnajib71/it-rollout-delivery-pack/actions/workflows/ci.yml/badge.svg)](https://github.com/iamnajib71/it-rollout-delivery-pack/actions/workflows/ci.yml) ![MIT licence](https://img.shields.io/badge/licence-MIT-blue) ![Markdown and Python](https://img.shields.io/badge/language-Markdown%20%2F%20Python-blue)
 
+[**Live demo**](https://iamnajib71.github.io/it-rollout-delivery-pack/) - browse the case study and download the PDF.
+
 ## What it shows recruiters
 - **Project Coordinator:** charter, WBS, milestones, communications, cutover and handover with owners.
 - **PMO Analyst:** RACI, cost estimate, RAID, worked change control and three fictional weekly RAG reports.

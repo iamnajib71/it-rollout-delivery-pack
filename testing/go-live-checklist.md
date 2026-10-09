@@ -6,8 +6,8 @@
 - [x] Historical transcripts and source revision cited.
 - [x] 25 stories link to specific UAT proof; fictional approvals labelled.
 - [x] Separate AD/SMB/VPN identities and lab limits documented.
-- [ ] Validation, PDF visual review and clean-clone demo complete; see docs/verification.md for execution record.
-- [ ] CI and release published; see publication record.
+- [x] Validation, PDF visual review and clean-clone demo complete; see docs/verification.md for execution record.
+- [x] Windows CI and GitHub Pages passed; release is created after final validation.
 
 ## Proposed real-office gate - not executed
 - [ ] Real sponsor and access owners approve scope/window.
