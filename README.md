@@ -1,6 +1,6 @@
 An evidence-backed IT rollout case study showing Project Coordinator, PMO Analyst and Business Analyst skills for a fictional 15-person office.
 
-![35-second local terminal demo: validate, export PDF and review real evidence](docs/demo.gif)
+![36-second local terminal demo: validate, export PDF and review real evidence](docs/demo.gif)
 
 [![CI](https://github.com/iamnajib71/it-rollout-delivery-pack/actions/workflows/ci.yml/badge.svg)](https://github.com/iamnajib71/it-rollout-delivery-pack/actions/workflows/ci.yml) ![MIT licence](https://img.shields.io/badge/licence-MIT-blue) ![Markdown and Python](https://img.shields.io/badge/language-Markdown%20%2F%20Python-blue)
 
@@ -54,10 +54,10 @@ python -m venv .venv
 .\.venv\Scripts\python.exe scripts/validate.py
 .\.venv\Scripts\python.exe scripts/build_pdf.py
 .\.venv\Scripts\python.exe scripts/record_demo.py
-Start-Process pack/IT-Rollout-Delivery-Pack.pdf
-Start-Process docs/demo.gif
+.\.venv\Scripts\python.exe scripts/build_site.py
+.\.venv\Scripts\python.exe scripts/show_evidence.py --story US-19
 ```
-The PDF command reads all delivery Markdown and CSV sources. Mermaid source is preserved legibly in the PDF; GitHub renders it graphically. The recorder saves actual command output and timestamps in `docs/demo.cast` and renders a GIF; regeneration takes about 35 seconds. [Verification](docs/verification.md).
+Open the PDF and GIF using the links above. The PDF command reads all delivery Markdown and CSV sources. Mermaid source is preserved legibly in the PDF; GitHub renders it graphically. The recorder saves actual output in asciicast v2 `docs/demo.cast`; the published GIF uses asciinema's **agg** renderer. With `--agg PATH_TO_AGG`, regeneration uses agg; the default portable Pillow renderer keeps the quick start self-contained. Recording takes about 35 seconds. [Verification](docs/verification.md).
 
 ## Results and evidence
 | Real historical result | Value | Source |

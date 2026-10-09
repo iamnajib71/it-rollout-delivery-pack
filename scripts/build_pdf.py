@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / 'pack/IT-Rollout-Delivery-Pack.pdf'
 SECTIONS = ['initiation', 'business-analysis', 'planning', 'control', 'testing', 'closure']
 styles = getSampleStyleSheet()
-styles.add(ParagraphStyle(name='Body', fontName='Helvetica', fontSize=9, leading=13, spaceAfter=6, splitLongWords=True))
+styles.add(ParagraphStyle(name='Body', fontName='Helvetica', fontSize=9, leading=12, spaceAfter=6, splitLongWords=True, allowWidows=False, allowOrphans=False))
 styles.add(ParagraphStyle(name='CodeSmall', fontName='Courier', fontSize=7, leading=10, spaceAfter=0))
 styles['Heading1'].textColor = colors.HexColor('#16324f')
 styles['Heading2'].textColor = colors.HexColor('#216b82')
