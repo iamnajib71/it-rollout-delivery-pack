@@ -1,0 +1,8 @@
+WBS ID,Work package,Fictional owner,Deliverable,Exit criterion
+1,Initiate,PC,"Charter, stakeholders, RACI",Scenario scope review
+2,Analyse,PC,"BRD, process maps, 25 stories, RTM",Evidence coverage review
+3,Plan,PC,"Schedule, estimate, communications",Tolerance review
+4,Configure,IT,Existing source Compose / services,Historical source artefacts
+5,Validate,IT / PC,"Historical UAT, cases, pack tests",Zero failures; gaps stated
+6,Transition,PC / IT,"Go-live, cutover, rollback",Lab gate only
+7,Close,PC,"Lessons, handover, PDF, demo, release",Clean clone / CI pass

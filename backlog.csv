@@ -1,0 +1,101 @@
+Summary,Issue Type,Description,Acceptance Criteria,Priority,Epic Link,Story Points
+US-01: Create a starter account,Story,"As a service desk analyst, I want to create a starter account, so that a starter has a directory identity.
+Requirement: BR-01. Fictional office; scope: Approval simulated.","Given an approved starter request
+When the analyst creates a Staff user
+Then the user exists in the Staff OU.",Medium,,2
+US-02: Reset password and require change,Story,"As a service desk analyst, I want to reset password and require change, so that temporary passwords must be replaced.
+Requirement: BR-01. Fictional office; scope: Flag verified; no Windows login.","Given an existing test account
+When its password is reset
+Then change at next logon is required.",Medium,,2
+US-03: Lock after five failed sign-ins,Story,"As a security owner, I want to lock after five failed sign-ins, so that password guessing is limited.
+Requirement: BR-01. Fictional office; scope: LDAP test.","Given a valid test account
+When five bad LDAP binds occur
+Then lockoutTime is set.",Medium,,3
+US-04: Reject correct password while locked,Story,"As a security owner, I want to reject correct password while locked, so that lockout is enforced.
+Requirement: BR-01. Fictional office; scope: LDAP test.","Given a locked test account
+When the correct password is used
+Then authentication is denied.",Medium,,2
+US-05: Unlock and authenticate,Story,"As a service desk analyst, I want to unlock and authenticate, so that authorised staff can recover access.
+Requirement: BR-01. Fictional office; scope: Approval simulated.","Given a locked test account
+When the analyst unlocks it
+Then authenticated LDAP search succeeds.",Medium,,2
+US-06: Assign directory Finance membership,Story,"As a service desk analyst, I want to assign directory finance membership, so that directory role membership is recorded.
+Requirement: BR-01. Fictional office; scope: Does not grant standalone SMB.","Given an approved Finance starter
+When GG-Finance is assigned
+Then the user appears in that group.",Medium,,2
+US-07: Disable a directory leaver,Story,"As a service desk analyst, I want to disable a directory leaver, so that directory access ends at departure.
+Requirement: BR-02. Fictional office; scope: SMB/VPN separate.","Given an approved leaver request
+When the account is disabled
+Then the disable flag is set.",High,,2
+US-08: Reject disabled account sign-in,Story,"As a security owner, I want to reject disabled account sign-in, so that leaver revocation is checked.
+Requirement: BR-02. Fictional office; scope: LDAP test.","Given a disabled account
+When an LDAP sign-in is attempted
+Then authentication is denied.",High,,2
+US-09: Write and read Finance files,Story,"As a Finance employee, I want to write and read finance files, so that Finance documents can be shared.
+Requirement: BR-03. Fictional office; scope: Standalone Samba.","Given Alice has finance membership
+When she writes and reads a file
+Then content is verified.",High,,2
+US-10: Deny Finance to non-Finance staff,Story,"As a Finance manager, I want to deny finance to non-finance staff, so that confidential files remain restricted.
+Requirement: BR-03. Fictional office; scope: Standalone Samba.","Given Bob belongs to staff
+When he opens Finance
+Then access is denied.",High,,2
+US-11: Use Public as Finance staff,Story,"As a Finance employee, I want to use public as finance staff, so that Finance can collaborate across teams.
+Requirement: BR-03. Fictional office; scope: Standalone Samba.","Given Alice is authenticated
+When she writes and reads Public
+Then both operations succeed.",High,,2
+US-12: Use Public as general staff,Story,"As a office employee, I want to use public as general staff, so that general staff can collaborate.
+Requirement: BR-03. Fictional office; scope: Standalone Samba.","Given Bob is authenticated
+When he writes and reads Public
+Then both operations succeed.",High,,2
+US-13: Complete a PDF print job,Story,"As a office employee, I want to complete a pdf print job, so that printed PDF output can be retrieved.
+Requirement: BR-04. Fictional office; scope: PDF output only.","Given Office-PDF is enabled
+When a test page is submitted
+Then IPP job-state is 9 and a PDF exists.",Medium,,3
+US-14: View queues without admin access,Story,"As a office employee, I want to view queues without admin access, so that staff can check waiting jobs.
+Requirement: BR-04. Fictional office; scope: HTTP response.","Given CUPS is running
+When I request /printers
+Then HTTP 200 is returned.",Medium,,2
+US-15: Require admin authentication,Story,"As a security owner, I want to require admin authentication, so that anonymous users cannot change queues.
+Requirement: BR-04. Fictional office; scope: Local lab admin.","Given an anonymous client
+When it requests /admin/
+Then HTTP 401 is returned.",Medium,,2
+US-16: Allow authenticated printer admin,Story,"As a service desk analyst, I want to allow authenticated printer admin, so that authorised operators can manage queues.
+Requirement: BR-04. Fictional office; scope: Local lab admin.","Given the print administrator credentials
+When the admin page is requested
+Then HTTP 200 is returned.",Medium,,2
+US-17: Create and list a device peer,Story,"As a service desk analyst, I want to create and list a device peer, so that each device has individual access.
+Requirement: BR-05. Fictional office; scope: Profile delivery untested.","Given a test device request
+When a peer is created
+Then the peer appears with an address.",High,,2
+US-18: Revoke a device peer,Story,"As a service desk analyst, I want to revoke a device peer, so that revoked profiles are removed.
+Requirement: BR-02. Fictional office; scope: No lost-device incident claimed.","Given a temporary peer exists
+When the peer is deleted
+Then it is absent from the next list.",High,,2
+US-19: Restore office route through VPN,Story,"As a remote employee, I want to restore office route through vpn, so that remote staff can reach office files.
+Requirement: BR-05. Fictional office; scope: Isolated Docker peer.","Given a handshake but missing office route
+When AllowedIPs includes 172.20.0.0/16 and the tunnel restarts
+Then route uses wg0 and Public listing succeeds.",High,,3
+US-20: Repair starter Finance access,Story,"As a service desk analyst, I want to repair starter finance access, so that approved starters can access Finance without widening permissions.
+Requirement: BR-03. Fictional office; scope: Approval simulated; transient test.","Given Public works but Finance denies a starter
+When finance membership is added and identity refreshed
+Then Finance write read and delete succeed.",High,,3
+US-21: Recover paused queues,Story,"As a service desk analyst, I want to recover paused queues, so that waiting jobs resume after maintenance.
+Requirement: BR-04. Fictional office; scope: Laser output untested.","Given both queues paused and a PDF job waiting
+When queues are enabled and accept jobs
+Then original job completes at state 9.",Medium,,3
+US-22: Respond on monitoring console,Story,"As a service desk analyst, I want to respond on monitoring console, so that operators can inspect service availability.
+Requirement: BR-06. Fictional office; scope: Response only.","Given Kuma is running
+When the local console is requested
+Then HTTP 200 is returned.",Medium,,2
+US-23: Show six monitors UP,Story,"As a service desk analyst, I want to show six monitors up, so that operators can identify unavailable services.
+Requirement: BR-06. Fictional office; scope: Point in time; no SLA.","Given the six office monitors exist
+When the status heartbeat is checked
+Then all six latest heartbeats are UP.",Medium,,2
+US-24: Open office dashboard,Story,"As a office employee, I want to open office dashboard, so that office links are available from one place.
+Requirement: BR-06. Fictional office; scope: Usability untested.","Given Homepage is running
+When the local dashboard is requested
+Then HTTP 200 is returned.",Medium,,2
+US-25: Clean up temporary test accounts,Story,"As a service desk analyst, I want to clean up temporary test accounts, so that test access is not retained.
+Requirement: BR-07. Fictional office; scope: AD cleanup.","Given the directory exercise is complete
+When cleanup runs
+Then the temporary account is removed.",Medium,,2

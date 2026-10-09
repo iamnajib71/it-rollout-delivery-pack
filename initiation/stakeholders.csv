@@ -1,0 +1,8 @@
+Role ID,Name (fictional),Role,Influence,Interest,Responsibility,Engagement
+SP,Maya Chen,Sponsor,High,High,"Scope, cost, go/no-go",Weekly digest
+PC,Liam Patel,Coordinator / BA,High,High,"Plan, requirements, records",Daily board
+IT,Noah Reed,Technical lead,High,High,"Build, tests, handover",Daily sync
+FM,Amira Khan,Finance manager,Medium,High,Finance approvals / UAT,Gate review
+HR,Sophie Lane,People coordinator,Medium,High,Starter/leaver accuracy,Workshop
+UR,Oliver Smith,Staff representative,Low,High,Usability / pilot feedback,Pilot session
+SO,Ella Wilson,Security reviewer,High,Medium,Least privilege / recovery,Gate review

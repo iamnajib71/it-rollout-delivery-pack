@@ -1,0 +1,91 @@
+{
+  "source_repository": "iamnajib71/it-support-homelab",
+  "source_commit": "e33df8d0ec8dc2148438d379fc69e57701d7baf8",
+  "review_date": "2026-10-09",
+  "files": [
+    {
+      "path": "evidence/homelab/README.md",
+      "source_path": "README.md",
+      "sha256": "2389aaf6b4afc56a2eb1380b91670d02c07d6e35035539dad4d49a40e1cd7796",
+      "source_url": "https://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/README.md"
+    },
+    {
+      "path": "evidence/homelab/docker-compose.yml",
+      "source_path": "docker-compose.yml",
+      "sha256": "f6e3c1fa3f2c417d25858fa00f5799d2026abb997917d643f495a94618330821",
+      "source_url": "https://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docker-compose.yml"
+    },
+    {
+      "path": "evidence/homelab/docs/homelab-results.md",
+      "source_path": "docs/homelab-results.md",
+      "sha256": "4a422f1f615ad3a5d38285b967b5ce2bae88bc2b50d9736cff6b21e025ffdc45",
+      "source_url": "https://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/homelab-results.md"
+    },
+    {
+      "path": "evidence/homelab/docs/homelab-runbook.md",
+      "source_path": "docs/homelab-runbook.md",
+      "sha256": "64c12a9d7e00d989dfeb80b1bf5cdc4964b86a373020597590328f7209cb5dfc",
+      "source_url": "https://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/homelab-runbook.md"
+    },
+    {
+      "path": "evidence/homelab/tests/homelab_check.ps1",
+      "source_path": "tests/homelab_check.ps1",
+      "sha256": "d838b84d779be9d90d2a0d65a8f8a63eff8f8165cc78f4a4645384ff53341ee0",
+      "source_url": "https://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/tests/homelab_check.ps1"
+    },
+    {
+      "path": "evidence/homelab/tests/ad_tasks.ps1",
+      "source_path": "tests/ad_tasks.ps1",
+      "sha256": "6d30d6b144f343b3334be1f932be100fccf3c6fb8989665f16c39ab54726723c",
+      "source_url": "https://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/tests/ad_tasks.ps1"
+    },
+    {
+      "path": "evidence/homelab/tests/lab_helpers.ps1",
+      "source_path": "tests/lab_helpers.ps1",
+      "sha256": "d0a1be3c9e4f3ecb4f34061bb586aae4a35061c4bb61e8476d90d78a5b1943f1",
+      "source_url": "https://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/tests/lab_helpers.ps1"
+    },
+    {
+      "path": "evidence/homelab/tests/reproduce_cases.py",
+      "source_path": "tests/reproduce_cases.py",
+      "sha256": "505e8151764e73d26c5af035c0cb751db3c2dcfcaf3e0ac7139a0e8d7e99c2e7",
+      "source_url": "https://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/tests/reproduce_cases.py"
+    },
+    {
+      "path": "evidence/homelab/docs/evidence/ad-tasks-20261006-155516-705.txt",
+      "source_path": "docs/evidence/ad-tasks-20261006-155516-705.txt",
+      "sha256": "a35f2f80eb22390e52ffd5020800fcb84ffa147d6d66bdbe96f931e7a509ffe9",
+      "source_url": "https://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/ad-tasks-20261006-155516-705.txt"
+    },
+    {
+      "path": "evidence/homelab/docs/evidence/homelab-check-20261006-211239-566.txt",
+      "source_path": "docs/evidence/homelab-check-20261006-211239-566.txt",
+      "sha256": "6615d7c80e5de6680bfd1b25cb7fb7c2881c678fbbaa6541340ab0913be66956",
+      "source_url": "https://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/homelab-check-20261006-211239-566.txt"
+    },
+    {
+      "path": "evidence/homelab/docs/evidence/support-cases-20261006-155525.txt",
+      "source_path": "docs/evidence/support-cases-20261006-155525.txt",
+      "sha256": "70bbe83df784d906c0f0f674c5f63ae0e0d3c17968e269bfa6e5be82b45b565f",
+      "source_url": "https://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/support-cases-20261006-155525.txt"
+    },
+    {
+      "path": "evidence/homelab/docs/cases/01-vpn-shares.md",
+      "source_path": "docs/cases/01-vpn-shares.md",
+      "sha256": "a3094dd29c83f5b789eb1c2f3e84ee61c8840958ec3b5a13620f5949fa0744fc",
+      "source_url": "https://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/cases/01-vpn-shares.md"
+    },
+    {
+      "path": "evidence/homelab/docs/cases/02-finance-starter.md",
+      "source_path": "docs/cases/02-finance-starter.md",
+      "sha256": "1f92b989b18baeade0921bbe260b65e917e27d8472d9595483a294e62a64a199",
+      "source_url": "https://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/cases/02-finance-starter.md"
+    },
+    {
+      "path": "evidence/homelab/docs/cases/03-office-printing.md",
+      "source_path": "docs/cases/03-office-printing.md",
+      "sha256": "d25ea077dfccd6da84a5bae06e6888c56c8c9f782e39760cf296b4b508e9ffc9",
+      "source_url": "https://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/cases/03-office-printing.md"
+    }
+  ]
+}

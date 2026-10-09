@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IT Rollout Delivery Pack | Nazmul Hassan</title>
+<meta name="description" content="Project Coordinator, PMO Analyst and Business Analyst case study with 25 evidence-linked stories and a downloadable delivery pack.">
+<style>
+:root{color-scheme:dark;font:17px/1.6 system-ui,sans-serif;background:#0b1523;color:#eaf0f7}body{max-width:1100px;margin:auto;padding:40px 24px}a{color:#73dfd8}h1{font-size:clamp(32px,6vw,64px);line-height:1.1;letter-spacing:-2px;margin:16px 0}h2{font-size:24px;line-height:1.3}p{max-width:850px;color:#bdccdd}.eyebrow{font-size:13px;letter-spacing:2px;color:#73dfd8;text-transform:uppercase}.button{display:inline-block;border:1px solid #73dfd8;padding:10px 20px;border-radius:8px;text-decoration:none;margin:8px 10px 8px 0}img{max-width:100%;height:auto;border-radius:12px;border:1px solid #344c69}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:28px 0}.card{padding:22px;background:#132237;border:1px solid #344c69;border-radius:12px}.metric{font-size:36px;color:#73dfd8;font-weight:bold}ul{padding-left:20px}footer{border-top:1px solid #344c69;margin-top:40px;padding-top:20px;font-size:14px}details{padding:18px;border:1px solid #344c69;border-radius:10px}summary{cursor:pointer;font-weight:600}
+</style></head><body>
+<div class="eyebrow">Nazmul Hassan / Project delivery portfolio</div>
+<h1>IT Rollout<br>Delivery Pack</h1>
+<p>A fictional 15-person office rollout built around real IT Support Homelab evidence. Explore the plan, follow a requirement to proof, and download the complete pack.</p>
+<a class="button" href="pack/IT-Rollout-Delivery-Pack.pdf">Download PDF pack</a><a class="button" href="https://github.com/iamnajib71/it-rollout-delivery-pack">Open artefact index</a>
+<h2>Watch the local evidence walkthrough</h2>
+<p>The recording runs pack validation, builds the PDF and inspects historical lab proof. It does not run a new homelab test.</p>
+<img src="docs/demo.gif" alt="Terminal recording of successful pack checks, PDF export and source evidence review">
+<div class="grid">
+<article class="card"><div class="metric">25</div><h2>Stories linked to proof</h2><p>Given/When/Then criteria with an exact transcript assertion and scope limit.</p><a href="https://github.com/iamnajib71/it-rollout-delivery-pack/blob/main/business-analysis/traceability.csv">Inspect traceability</a></article>
+<article class="card"><div class="metric">3 / 3</div><h2>Faults repaired</h2><p>VPN route, Finance permissions and paused queues, reproduced and repaired on 6 October 2026.</p><a href="https://github.com/iamnajib71/it-rollout-delivery-pack/blob/main/testing/uat-results.md">Review UAT evidence</a></article>
+<article class="card"><div class="metric">6</div><h2>Monitors UP</h2><p>Point-in-time historical service health. Both homelab and AD scripts recorded zero failed checks.</p><a href="https://github.com/iamnajib71/it-support-homelab">Open original homelab</a></article>
+</div>
+<h2>Follow one requirement end to end</h2>
+<article class="card"><p><strong>BR-05:</strong> individual lab remote access → <strong>US-19:</strong> restore office route through VPN → <strong>UAT-19:</strong> handshake exists, office route missing; correct AllowedIPs → <strong>proof:</strong> “PASS VPN routing restored; authenticated share listing succeeds”.</p><p>Evidence: <code>support-cases-20261006-155525.txt</code>. Limit: isolated Docker peer, no public VPN endpoint.</p><a href="https://github.com/iamnajib71/it-rollout-delivery-pack/blob/main/evidence/homelab/docs/evidence/support-cases-20261006-155525.txt">Read the actual transcript</a></article>
+<h2>Skim by job skill</h2><div class="grid">
+<article class="card"><h2>Project Coordinator</h2><ul><li>Charter, WBS and milestones</li><li>Communications and stakeholder owners</li><li>Cutover, rollback and handover</li></ul><a href="https://github.com/iamnajib71/it-rollout-delivery-pack/tree/main/planning">Planning artefacts</a></article>
+<article class="card"><h2>PMO Analyst</h2><ul><li>RACI and RAID controls</li><li>Budget estimate and worked change</li><li>Three fictional weekly reports</li></ul><a href="https://github.com/iamnajib71/it-rollout-delivery-pack/tree/main/control">Control artefacts</a></article>
+<article class="card"><h2>Business Analyst</h2><ul><li>Six process maps and BRD</li><li>Jira CSV with 25 stories</li><li>Requirements-to-test traceability</li></ul><a href="https://github.com/iamnajib71/it-rollout-delivery-pack/tree/main/business-analysis">Analysis artefacts</a></article></div>
+<details><summary>Fictional scenario and honest limits</summary><p>All office people, approvals, estimates, schedule and weekly reports are fictional. Technical proof is historical lab evidence dated 6 October 2026. No real business-user acceptance, production deployment, physical laser output, public VPN, MFA, AD-integrated shares, proven restore or 15-user load test is claimed. Real-office go-live remains on hold.</p></details>
+<footer>Built by Nazmul Hassan · <a href="https://www.linkedin.com/in/iamnajib71">LinkedIn</a> · <a href="https://github.com/iamnajib71">GitHub</a> · MIT licence</footer>
+</body></html>

@@ -1,0 +1,11 @@
+Item,Quantity,Unit AUD ex GST,Total AUD ex GST,Period,Basis
+Laptops incl OS,15,1200,18000,One-time,"Assumed allowance, not quote"
+Monitors / peripherals,15,250,3750,One-time,Assumed allowance
+Host / storage,1,2200,2200,One-time,Design required
+Firewall / switch / Wi-Fi,1,1400,1400,One-time,Not lab deployment
+Network printer,1,650,650,One-time,"Physical estimate, laser simulated"
+UPS / backup media,1,800,800,One-time,Restore rehearsal required
+Labour,80,75,6000,One-time,80h at assumed AUD75/h
+Internet,12,100,1200,Annual,Assumed monthly allowance
+Backup service,12,50,600,Annual,Not implemented
+Support,48,75,3600,Annual,4h/month assumed

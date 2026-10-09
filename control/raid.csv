@@ -1,0 +1,13 @@
+ID,Type,Description,Fictional owner,Impact,Status,Basis,Next action,Due / gate,Escalate to
+R-01,Risk,AD disable leaves SMB/VPN active,IT,High,Open,Independent identities,Three-path revocation checklist,Before production,SO
+R-02,Risk,Single host failure stops office,IT,High,Open,No redundancy,Off-host backups and restore rehearsal,Before production,SP
+R-03,Risk,HTTP availability masks print failure,IT,Medium,Mitigated in lab,CR-001,Job-state / output tests,6 Oct evidence,PC
+R-04,Risk,Public exposure without hardening,SO,High,Open,Loopback lab only,Production security review,Before production,SP
+A-01,Assumption,15 staff need new endpoints,SP,Medium,Unvalidated,Fictional budget,Confirm real inventory,Baseline review,PC
+A-02,Assumption,Hardware available for pilot,PC,Medium,Unvalidated,Schedule baseline,Quote lead times / rebaseline,12 Oct proposed,SP
+I-01,Issue,No physical printer output evidence,IT,High,Open,Laser simulated,Test real device,Before production,UR
+I-02,Issue,No 15-person UAT / capacity run,PC,High,Open,Component evidence only,Staffed pilot / concurrency tests,Before production,SP
+I-03,Issue,No scheduled backup / restore result,IT,High,Open,Runbook procedure only,Implement and verify isolated restore,Before production,SO
+D-01,Dependency,Real access-model approvals,SP,High,Pending,Fictional approvals only,Obtain real approvals,Before production,FM
+D-02,Dependency,Windows Docker / Python for lab rerun,IT,Medium,Historical environment confirmed,Source results,Check prerequisites each rerun,Each lab run,PC
+D-03,Dependency,Persistent Samba provisioning,IT,High,Pending,Transient support test,Record Compose and retest recreation,Before production,HR

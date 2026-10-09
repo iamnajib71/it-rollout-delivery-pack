@@ -1,0 +1,9 @@
+Activity,SP,PC,IT,FM,HR,UR,SO
+Scope and charter,A,R,C,C,C,C,C
+Requirements / process design,A,R,C,C,C,C,C
+Build / configuration,I,C,A/R,C,I,I,C
+Finance access,I,C,R,A,C,I,C
+Starter/leaver request,I,C,R,C,A,I,C
+UAT coordination,A,R,R,C,C,C,C
+Cutover / rollback,A,R,R,C,I,I,C
+Handover / closure,A,R,R,I,I,C,C

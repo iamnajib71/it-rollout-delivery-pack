@@ -1,0 +1,8 @@
+Communication,Fictional audience,Channel,Cadence,Owner,Content
+Daily readiness,"IT, PC",Call / action board,Daily pilot,PC,"Blockers, owners, dates"
+Weekly status,"SP, FM, HR, SO",RAG report,Friday,PC,"Variance, RAID, decisions"
+Access decisions,"HR, FM, IT",Controlled request,Per request,HR,"Identity, time, groups"
+UAT review,"UR, FM, IT, PC",Cases / defect log,Pilot gate,PC,"Proof, gaps, decision"
+Cutover notice,All fictional staff,Email / meeting,48h before and outcome,PC,"Window, impact, contact"
+Incident escalation,"IT, SP, SO",Call then ticket,Immediately for security,IT,"Containment, impact, deadline"
+Handover,"IT, PC, SP",Runbook review,Closure,PC,"Owners, open actions"
