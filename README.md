@@ -1,4 +1,4 @@
-An evidence-backed IT rollout case study showing Project Coordinator, PMO Analyst and Business Analyst skills for a fictional 15-person office.
+An IT rollout case study covering delivery planning, change control, requirements analysis and service transition for a fictional 15-person office.
 
 ![36-second local terminal demo: validate, export PDF and review real evidence](docs/demo.gif)
 
@@ -6,10 +6,10 @@ An evidence-backed IT rollout case study showing Project Coordinator, PMO Analys
 
 [**Live demo**](https://iamnajib71.github.io/it-rollout-delivery-pack/) - browse the case study and download the PDF.
 
-## What it shows recruiters
-- **Project Coordinator:** charter, WBS, milestones, communications, cutover and handover with owners.
-- **PMO Analyst:** RACI, cost estimate, RAID, worked change control and three fictional weekly RAG reports.
-- **Business Analyst:** six process maps, 25 Given/When/Then stories, BRD and qualified requirements traceability.
+## Technical capabilities
+- **Delivery planning:** charter, WBS, milestones, communications, cutover and handover with owners.
+- **Project controls:** RACI, cost estimate, RAID, worked change control and three fictional weekly RAG reports.
+- **Requirements analysis:** six process maps, 25 Given/When/Then stories, BRD and qualified requirements traceability.
 
 ## Start here - two minutes
 | Review | Artefact |
