@@ -1,5 +1,19 @@
 An IT rollout case study covering delivery planning, change control, requirements analysis and service transition for a fictional 15-person office.
 
+<!-- project-overview:start -->
+## Project overview
+
+| Area | What to look for |
+| --- | --- |
+| **Problem addressed** | A small-office rollout needs agreed scope, assigned owners, testable requirements, controlled changes and an operational handover. |
+| **Implemented work** | Produced a fictional 15-person office delivery pack: charter, WBS, schedule, RAID, worked change control, BRD, 25 traced stories, UAT material, cutover, rollback and handover. Linked it to dated homelab evidence. |
+| **Skills demonstrated** | Delivery planning, requirements analysis, process mapping, Jira import preparation, change control, traceability, UAT and service transition. |
+| **Demo** | [Watch validation, PDF export and evidence review](docs/demo.gif), or [browse the case study](https://iamnajib71.github.io/it-rollout-delivery-pack/). |
+| **How to use it** | [Quick start](#quick-start---windows): validate the source, build the PDF and inspect a story with `scripts/show_evidence.py`. Expected: reproducible document exports and traceable evidence links. |
+| **Verification** | [Results and evidence](#results-and-evidence) and [verification](docs/verification.md). Office approvals and delivery dates are fictional; the source lab outputs are real historical records. |
+
+<!-- project-overview:end -->
+
 ![36-second local terminal demo: validate, export PDF and review real evidence](docs/demo.gif)
 
 [![CI](https://github.com/iamnajib71/it-rollout-delivery-pack/actions/workflows/ci.yml/badge.svg)](https://github.com/iamnajib71/it-rollout-delivery-pack/actions/workflows/ci.yml) ![MIT licence](https://img.shields.io/badge/licence-MIT-blue) ![Markdown and Python](https://img.shields.io/badge/language-Markdown%20%2F%20Python-blue)
