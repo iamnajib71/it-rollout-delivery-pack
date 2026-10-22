@@ -1,0 +1,52 @@
+Fictional case study; actual local command results.
+Captured UTC: 2026-10-22T10:07:26.690208+00:00
+
+COMMAND: python scripts/validate.py
+PASS provenance: 14 exact source snapshots
+PASS traceability: 25 stories, 25 UAT mappings, every exact proof found
+PASS artefacts: labels, RACI, budget arithmetic, RAID and local links
+PASS media: 36.0s GIF, 1280x640 preview, 64-page PDF
+RESULT: 0 failed pack checks (historical homelab results unchanged)
+EXIT: 0
+
+COMMAND: python scripts/build_pdf.py
+PDF built: pack/IT-Rollout-Delivery-Pack.pdf (64 pages)
+EXIT: 0
+
+COMMAND: python scripts/validate.py
+PASS provenance: 14 exact source snapshots
+PASS traceability: 25 stories, 25 UAT mappings, every exact proof found
+PASS artefacts: labels, RACI, budget arithmetic, RAID and local links
+PASS media: 36.0s GIF, 1280x640 preview, 64-page PDF
+RESULT: 0 failed pack checks (historical homelab results unchanged)
+EXIT: 0
+
+COMMAND: python scripts/build_site.py
+Pages site staged: index, recorded demo and PDF
+EXIT: 0
+
+COMMAND: python scripts/verify_jira.py
+PASS Jira export: 43 unique source mappings; 25 stories with exact acceptance criteria, requirements, epics and estimates
+PASS configuration: 4 mapped columns, active sprint, saved filters, 2 enabled project-scoped automation rules
+PASS overdue rule: real positive match; original test date, labels and flag restored
+EXIT: 0
+
+COMMAND: python -m py_compile scripts/jira_import.py scripts/jira_configure.py scripts/verify_jira.py
+EXIT: 0
+
+FINAL COMMAND: python scripts/validate.py
+PASS provenance: 14 exact source snapshots
+PASS traceability: 25 stories, 25 UAT mappings, every exact proof found
+PASS artefacts: labels, RACI, budget arithmetic, RAID and local links
+PASS media: 36.0s GIF, 1280x640 preview, 64-page PDF
+RESULT: 0 failed pack checks (historical homelab results unchanged)
+EXIT: 0
+
+FINAL COMMAND: python scripts/verify_jira.py
+PASS Jira export: 43 unique source mappings; 25 stories with exact acceptance criteria, requirements, epics and estimates
+PASS configuration: 4 mapped columns, active sprint, saved filters, 2 enabled project-scoped automation rules
+PASS overdue rule: real positive match; original test date, labels and flag restored
+EXIT: 0
+
+FINAL COMMAND: python -m py_compile scripts/jira_import.py scripts/jira_configure.py scripts/verify_jira.py
+EXIT: 0

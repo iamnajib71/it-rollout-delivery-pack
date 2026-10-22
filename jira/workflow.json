@@ -1,0 +1,76 @@
+{
+  "self": "https://iamnajib.atlassian.net/rest/api/3/workflow/search?expand=statuses,transitions&maxResults=50&startAt=0",
+  "maxResults": 50,
+  "startAt": 0,
+  "total": 1,
+  "isLast": true,
+  "values": [
+    {
+      "id": {
+        "name": "ITROLL - Rollout UAT workflow",
+        "entityId": "40642420-c64f-4615-9f45-2ff006e37f2f"
+      },
+      "description": "Fictional case study; sequential acceptance workflow",
+      "transitions": [
+        {
+          "id": "1",
+          "name": "Create",
+          "description": "",
+          "from": [],
+          "to": "10004",
+          "type": "initial"
+        },
+        {
+          "id": "11",
+          "name": "Start work",
+          "description": "",
+          "from": [
+            "10004"
+          ],
+          "to": "3",
+          "type": "directed"
+        },
+        {
+          "id": "21",
+          "name": "Send to UAT",
+          "description": "",
+          "from": [
+            "3"
+          ],
+          "to": "10006",
+          "type": "directed"
+        },
+        {
+          "id": "31",
+          "name": "Accept",
+          "description": "",
+          "from": [
+            "10006"
+          ],
+          "to": "10005",
+          "type": "directed"
+        }
+      ],
+      "statuses": [
+        {
+          "id": "10004",
+          "name": "To Do"
+        },
+        {
+          "id": "10005",
+          "name": "Done"
+        },
+        {
+          "id": "10006",
+          "name": "In UAT"
+        },
+        {
+          "id": "3",
+          "name": "In Progress"
+        }
+      ],
+      "created": "2026-10-22T20:41:31.541+1100",
+      "updated": "2026-10-22T20:41:31.541+1100"
+    }
+  ]
+}

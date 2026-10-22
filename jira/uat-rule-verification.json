@@ -1,0 +1,37 @@
+{
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations",
+  "id": "10005",
+  "self": "https://iamnajib.atlassian.net/rest/api/3/issue/10005",
+  "key": "ITROLL-6",
+  "fields": {
+    "assignee": {
+      "self": "https://iamnajib.atlassian.net/rest/api/3/user?accountId=70121%3A4d2ba86c-bb4c-4ab2-b65c-92fb860ef393",
+      "accountId": "70121:4d2ba86c-bb4c-4ab2-b65c-92fb860ef393",
+      "emailAddress": "iam.najib16@gmail.com",
+      "avatarUrls": {
+        "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/70121:4d2ba86c-bb4c-4ab2-b65c-92fb860ef393/4bd576c6-9c8d-4b5e-a435-c439c855ec45/48",
+        "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/70121:4d2ba86c-bb4c-4ab2-b65c-92fb860ef393/4bd576c6-9c8d-4b5e-a435-c439c855ec45/24",
+        "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/70121:4d2ba86c-bb4c-4ab2-b65c-92fb860ef393/4bd576c6-9c8d-4b5e-a435-c439c855ec45/16",
+        "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/70121:4d2ba86c-bb4c-4ab2-b65c-92fb860ef393/4bd576c6-9c8d-4b5e-a435-c439c855ec45/32"
+      },
+      "displayName": "Nazmul Hassan Najib",
+      "active": true,
+      "timeZone": "Australia/Sydney",
+      "accountType": "atlassian"
+    },
+    "status": {
+      "self": "https://iamnajib.atlassian.net/rest/api/3/status/10006",
+      "description": "",
+      "iconUrl": "https://iamnajib.atlassian.net/",
+      "name": "In UAT",
+      "id": "10006",
+      "statusCategory": {
+        "self": "https://iamnajib.atlassian.net/rest/api/3/statuscategory/4",
+        "id": 4,
+        "key": "indeterminate",
+        "colorName": "yellow",
+        "name": "In Progress"
+      }
+    }
+  }
+}

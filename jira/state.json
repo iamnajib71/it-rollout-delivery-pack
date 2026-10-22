@@ -1,0 +1,85 @@
+{
+  "site": "https://iamnajib.atlassian.net",
+  "projectKey": "ITROLL",
+  "projectId": "10001",
+  "fields": {
+    "Requirement ID": "customfield_10036",
+    "Risk rating": "customfield_10037"
+  },
+  "issues": {
+    "epic-files": "ITROLL-1",
+    "epic-identity": "ITROLL-2",
+    "epic-monitoring": "ITROLL-3",
+    "epic-printing": "ITROLL-4",
+    "epic-remote": "ITROLL-5",
+    "us-01": "ITROLL-6",
+    "us-02": "ITROLL-7",
+    "us-03": "ITROLL-8",
+    "us-04": "ITROLL-9",
+    "us-05": "ITROLL-10",
+    "us-06": "ITROLL-11",
+    "us-07": "ITROLL-12",
+    "us-08": "ITROLL-13",
+    "us-09": "ITROLL-14",
+    "us-10": "ITROLL-15",
+    "us-11": "ITROLL-16",
+    "us-12": "ITROLL-17",
+    "us-13": "ITROLL-18",
+    "us-14": "ITROLL-19",
+    "us-15": "ITROLL-20",
+    "us-16": "ITROLL-21",
+    "us-17": "ITROLL-22",
+    "us-18": "ITROLL-23",
+    "us-19": "ITROLL-24",
+    "us-20": "ITROLL-25",
+    "us-21": "ITROLL-26",
+    "us-22": "ITROLL-27",
+    "us-23": "ITROLL-28",
+    "us-24": "ITROLL-29",
+    "us-25": "ITROLL-30",
+    "r-01": "ITROLL-31",
+    "r-02": "ITROLL-32",
+    "r-03": "ITROLL-33",
+    "r-04": "ITROLL-34",
+    "a-01": "ITROLL-35",
+    "a-02": "ITROLL-36",
+    "i-01": "ITROLL-37",
+    "i-02": "ITROLL-38",
+    "i-03": "ITROLL-39",
+    "d-01": "ITROLL-40",
+    "d-02": "ITROLL-41",
+    "d-03": "ITROLL-42",
+    "cr-001": "ITROLL-43"
+  },
+  "estimateField": "customfield_10035",
+  "workflowSchemeId": 10003,
+  "filters": {
+    "UAT queue": {
+      "id": "10002",
+      "jql": "project = ITROLL AND status = \"In UAT\" ORDER BY priority DESC",
+      "url": "https://iamnajib.atlassian.net/issues/?filter=10002"
+    },
+    "High risks": {
+      "id": "10003",
+      "jql": "project = ITROLL AND labels = risk AND \"Risk rating\" ~ \"High\" AND statusCategory != Done",
+      "url": "https://iamnajib.atlassian.net/issues/?filter=10003"
+    },
+    "Blocked": {
+      "id": "10004",
+      "jql": "project = ITROLL AND (labels = blocked OR Flagged = Impediment) AND statusCategory != Done",
+      "url": "https://iamnajib.atlassian.net/issues/?filter=10004"
+    },
+    "Open risks": {
+      "id": "10005",
+      "jql": "project = ITROLL AND labels = risk AND statusCategory != Done",
+      "url": "https://iamnajib.atlassian.net/issues/?filter=10005"
+    }
+  },
+  "boardId": 2,
+  "sprintId": 2,
+  "dashboardId": "10001",
+  "automationRuleUuids": [
+    "01a16301-b2f7-70c9-aa5b-0d868ff0517e",
+    "01a16301-b5c0-7d93-aa97-0e81b5779a0a"
+  ]
+}

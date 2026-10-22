@@ -3,3 +3,4 @@ evidence/homelab/** -text
 *.pdf binary
 *.png binary
 *.gif binary
+*.xlsx binary

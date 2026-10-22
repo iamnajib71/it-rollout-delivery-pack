@@ -1,0 +1,14 @@
+{
+  "self": "https://iamnajib.atlassian.net/rest/api/3/task/607dd726-5bce-4d32-a5e5-9deaae95c8f0",
+  "id": "607dd726-5bce-4d32-a5e5-9deaae95c8f0",
+  "description": "Switch a Space Workflow Scheme",
+  "status": "RUNNING",
+  "message": "Preparing scheme switch plan",
+  "result": null,
+  "submittedBy": 10000,
+  "progress": 0,
+  "elapsedRuntime": 29,
+  "submitted": 1792662093028,
+  "started": 1792662093028,
+  "lastUpdate": 1792662093057
+}

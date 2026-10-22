@@ -1,0 +1,22 @@
+{
+  "UAT queue": {
+    "id": "10002",
+    "jql": "project = ITROLL AND status = \"In UAT\" ORDER BY priority DESC",
+    "url": "https://iamnajib.atlassian.net/issues/?filter=10002"
+  },
+  "High risks": {
+    "id": "10003",
+    "jql": "project = ITROLL AND labels = risk AND \"Risk rating\" ~ \"High\" AND statusCategory != Done",
+    "url": "https://iamnajib.atlassian.net/issues/?filter=10003"
+  },
+  "Blocked": {
+    "id": "10004",
+    "jql": "project = ITROLL AND (labels = blocked OR Flagged = Impediment) AND statusCategory != Done",
+    "url": "https://iamnajib.atlassian.net/issues/?filter=10004"
+  },
+  "Open risks": {
+    "id": "10005",
+    "jql": "project = ITROLL AND labels = risk AND statusCategory != Done",
+    "url": "https://iamnajib.atlassian.net/issues/?filter=10005"
+  }
+}

@@ -1,6 +1,6 @@
 # IT Rollout Delivery Pack
 
-I turned a working office homelab into a fictional rollout case study with requirements, delivery controls and acceptance evidence that a coordinator or analyst can trace.
+I built a fictional office rollout case study in a real Jira Cloud site, connecting requirements, delivery controls and a status report to traceable lab evidence.
 
 ![Actual pack validation, PDF export and evidence review](docs/demo.gif)
 
@@ -11,12 +11,12 @@ I turned a working office homelab into a fictional rollout case study with requi
 | Area | Evidence-backed summary |
 | --- | --- |
 | **The problem** | A fictional 15-person office relies on local accounts, ad hoc file copies and informal remote-access requests; staff and support lose time to unclear access and ownership. [The charter](initiation/charter.md) labels this as an assumed scenario. |
-| **What I built** | I wrote the charter, requirements, process maps, backlog, schedule, budget, RAID and transition pack, and mapped acceptance claims to historical homelab evidence. |
-| **Results** | [25 story/UAT evidence mappings and 14 exact source hashes validated](docs/verification.md); [3 historical support faults reproduced and repaired](evidence/homelab/docs/evidence/support-cases-20261006-155525.txt). Planning and approvals are fictional; this is not business-user UAT. |
-| **Skills shown** | Business analysis, requirements gathering, process mapping, user stories, acceptance criteria, requirements traceability, UAT planning, RACI, RAID, change control and project coordination. |
-| **Relevant roles** | IT Project Coordinator, PMO Analyst, Junior Business Analyst, UAT Analyst. |
+| **What I built** | I configured a real Jira Scrum project, workflow, custom fields, automation, filters, sprint and dashboard; imported the delivery pack; and built an Excel status report from the live export. |
+| **Results** | [43 Jira issues: 5 epics, 25 stories, 12 RAID tasks and 1 change request](jira/issues.csv); [2 enabled automation rules](jira/automation-rules.json). [A verified rerun kept the same issue keys](jira/verification.md). The fictional case study has no business-user UAT or production completion claim. |
+| **Skills shown** | Jira Administration, Jira Cloud REST API, Scrum, JQL, Jira Automation, dashboards, Excel reporting, requirements gathering, acceptance criteria, requirements traceability, UAT, RAID, change control and project coordination. |
+| **Relevant roles** | Jira Administrator, Tools and Reporting Analyst, Project Coordinator, Business Analyst. |
 | **How it was built** | Designed, specified and reviewed by me; built with Codex as my coding agent (vibe coding). Verification and its limits are linked below. |
-| **Try it / evidence** | [Live case study](https://iamnajib71.github.io/it-rollout-delivery-pack/) · [PDF pack](pack/IT-Rollout-Delivery-Pack.pdf) · [Traceability](business-analysis/traceability.csv) · [Verification](docs/verification.md) |
+| **Try it / evidence** | [Jira board capture](jira/screenshots/board.png) · [Dashboard capture](jira/screenshots/dashboard.png) · [Excel report](jira/status-report.xlsx) · [Run in Jira](#run-in-jira) · [Live case study](https://iamnajib71.github.io/it-rollout-delivery-pack/) |
 
 ## What I did, step by step
 
@@ -25,12 +25,37 @@ I turned a working office homelab into a fictional rollout case study with requi
 3. Prepared the [work breakdown](planning/wbs.csv), schedule, budget, RACI and communications baseline.
 4. Worked through a simulated change request and status reports, keeping assumptions separate from measured technical results.
 5. Mapped each story to specific historical checks and an explicit limit, then planned UAT, cutover, rollback and handover.
-6. Validated hashes, mappings, links and arithmetic, exported the PDF and repeated the documented build from a [clean public clone](docs/verification.md).
+6. Imported the pack into a real Jira Cloud Scrum project with stable source IDs, requirement fields, epic parents and story estimates; configured a dedicated To Do → In Progress → In UAT → Done workflow.
+7. Enabled two project automation rules, started a four-story pilot sprint, and tested UAT assignment with explicitly labelled fictional administration exercises. Captured the board, dashboard and automation settings.
+8. Re-ran the importer, verified the live export against all source stories, and built an Excel report showing progress by epic, UAT status and open risks. [Jira verification](jira/verification.md) · [Earlier pack verification](docs/verification.md).
 
 ## Problems I hit and how I solved them
 
 - **Windows checkout conversion could change evidence bytes:** preserved evidence line endings and binary exports with Git attributes so the manifest still validates after cloning. [Verification record](docs/verification.md) · [fixing commit](https://github.com/iamnajib71/it-rollout-delivery-pack/commit/db1bb48).
 - **A component check does not prove an entire office rollout:** qualified the story mappings and left real-office go-live on hold for untested requirements. [Lessons learned](closure/lessons-learned.md) · [acceptance limits](business-analysis/brd.md).
+- **The configured site initially exposed Confluence but returned Jira API 404:** paused mutations until Jira access was enabled, then verified administrator access. [Run record](jira/verification.md).
+- **Custom fields were absent from the create screen, and Jira capped field-list pages:** added fields to dedicated project screens and paginated administrator field discovery. Verification caught the retry problem; unused duplicates were moved to recoverable trash, and a corrected rerun preserved all issue keys. [Importer](scripts/jira_import.py).
+
+## Run in Jira
+
+**Fictional case study run in a real Jira site.** [Project](https://iamnajib.atlassian.net/browse/ITROLL) · [Scrum board](https://iamnajib.atlassian.net/jira/software/c/projects/ITROLL/boards/2) · [Dashboard](https://iamnajib.atlassian.net/jira/dashboards/10001). Jira links require site access; the committed captures and exports can be reviewed without an account.
+
+The live export contains 25 stories: 23 To Do, 1 In Progress, 1 In UAT and 0 Done. The two moved stories test Jira administration; they are not new lab runs or business acceptance. Four risk records remain open in Jira; their original RAID states are retained in descriptions and labels.
+
+Use Python 3.11+ and a Jira administrator account. Keep exactly `JIRA_BASE_URL`, `JIRA_EMAIL` and `JIRA_API_TOKEN` in the ignored `.env`. A hostname without a scheme is normalised to HTTPS. Never paste credentials into commands or commit them.
+
+```powershell
+python scripts/jira_import.py --plan        # source manifest; no network
+python scripts/jira_import.py --probe       # check authentication/permissions
+python scripts/jira_import.py               # create or reuse ITROLL and its source-marked issues
+python scripts/jira_configure.py            # project automation and dashboard gadget creation
+python scripts/jira_import.py --export-only # refresh actual CSV / JSON evidence
+python scripts/verify_jira.py               # verify saved evidence against source artefacts
+```
+
+Preserve `jira/state.json`. The importer verifies project and source ownership, resumes from saved Jira keys and uses source labels for recovery. It creates missing issues; it does not overwrite later human edits or reset progress. Run one importer at a time. After an uncertain network response, inspect the site and allow search indexing to catch up before retrying. [UI configuration and manual steps](jira/manual-steps.md) cover board mapping, gadget preferences, review due dates and capture refreshes. No plan upgrade was made.
+
+[CSV export](jira/issues.csv) · [JQL filters](jira/filters.json) · [Automation API export](jira/automation-rules.json) · [Excel report](jira/status-report.xlsx) · [Report preview](jira/status-report-preview.png) · [Detailed verification](jira/verification.md). The report builder uses the bundled spreadsheet runtime; [rebuild instructions](jira/manual-steps.md) document that local dependency.
 
 ## Start here
 | Review | Artefact |
@@ -95,7 +120,7 @@ Open the PDF and GIF using the links above. The PDF command reads all delivery M
 `initiation/` scope/roles; `business-analysis/` BRD/processes/RTM; `planning/` baseline; `control/` logs/reports; `testing/` UAT/transition; `closure/` handover; `evidence/` source snapshots; `scripts/` build/validate/demo; `pack/` PDF; `docs/` media/verification.
 
 ## Honest limits
-Office, people, approvals, budget, schedule and reports are fictional. Evidence dates are real. This is retrospective lab acceptance, not business-user UAT or production deployment. No public VPN, MFA, Windows domain join, AD-integrated shares, physical laser, scheduled backup, proven restore or 15-user load test. Epic Link stays blank until real Jira keys exist. Real-office go-live remains on hold. Screenshots are historical source captures. Social preview upload is a manual Settings step for Nazmul.
+Office, people, approvals, budget and rollout schedule are fictional. Jira configuration, issue keys, API exports and Jira screenshots are real; the pilot sprint and status transitions are case-study administration exercises. Historical lab acceptance remains separate from business-user UAT and production deployment. No public VPN, MFA, Windows domain join, AD-integrated shares, physical laser, scheduled backup, proven restore or 15-user load test. The portable source CSV retains blank Epic Link; actual Jira parent keys are in the live export. Real-office go-live remains on hold. Lab screenshots remain historical. The new sprint has no delivery history or completed work. Review dates need human decisions before the overdue-risk rule can flag genuine overdue reviews. Social preview upload is a manual Settings step for Nazmul.
 
 ## Built by Nazmul Hassan
 

@@ -1,0 +1,118 @@
+{
+  "scope": {
+    "type": "GLOBAL"
+  },
+  "statuses": [
+    {
+      "name": "To Do",
+      "statusCategory": "TODO",
+      "statusReference": "c638b551-0ab3-57e0-9470-161b72cf4238",
+      "id": "10004"
+    },
+    {
+      "name": "In Progress",
+      "statusCategory": "IN_PROGRESS",
+      "statusReference": "b42b67c8-95a8-57b0-9608-a39695f0a42e",
+      "id": "3"
+    },
+    {
+      "name": "In UAT",
+      "statusCategory": "IN_PROGRESS",
+      "statusReference": "5f058427-ca65-5116-910a-7667aa3b03b5"
+    },
+    {
+      "name": "Done",
+      "statusCategory": "DONE",
+      "statusReference": "8d87b499-a9ff-5cde-9b2d-fbc2bcb78f8e",
+      "id": "10005"
+    }
+  ],
+  "workflows": [
+    {
+      "name": "ITROLL - Rollout UAT workflow",
+      "description": "Fictional case study; sequential acceptance workflow",
+      "statuses": [
+        {
+          "statusReference": "c638b551-0ab3-57e0-9470-161b72cf4238",
+          "properties": {},
+          "layout": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "statusReference": "b42b67c8-95a8-57b0-9608-a39695f0a42e",
+          "properties": {},
+          "layout": {
+            "x": 200,
+            "y": 0
+          }
+        },
+        {
+          "statusReference": "5f058427-ca65-5116-910a-7667aa3b03b5",
+          "properties": {},
+          "layout": {
+            "x": 400,
+            "y": 0
+          }
+        },
+        {
+          "statusReference": "8d87b499-a9ff-5cde-9b2d-fbc2bcb78f8e",
+          "properties": {},
+          "layout": {
+            "x": 600,
+            "y": 0
+          }
+        }
+      ],
+      "transitions": [
+        {
+          "id": "1",
+          "name": "Create",
+          "type": "INITIAL",
+          "toStatusReference": "c638b551-0ab3-57e0-9470-161b72cf4238",
+          "links": []
+        },
+        {
+          "id": "11",
+          "name": "Start work",
+          "type": "DIRECTED",
+          "toStatusReference": "b42b67c8-95a8-57b0-9608-a39695f0a42e",
+          "links": [
+            {
+              "fromStatusReference": "c638b551-0ab3-57e0-9470-161b72cf4238",
+              "fromPort": 0,
+              "toPort": 1
+            }
+          ]
+        },
+        {
+          "id": "21",
+          "name": "Send to UAT",
+          "type": "DIRECTED",
+          "toStatusReference": "5f058427-ca65-5116-910a-7667aa3b03b5",
+          "links": [
+            {
+              "fromStatusReference": "b42b67c8-95a8-57b0-9608-a39695f0a42e",
+              "fromPort": 0,
+              "toPort": 1
+            }
+          ]
+        },
+        {
+          "id": "31",
+          "name": "Accept",
+          "type": "DIRECTED",
+          "toStatusReference": "8d87b499-a9ff-5cde-9b2d-fbc2bcb78f8e",
+          "links": [
+            {
+              "fromStatusReference": "5f058427-ca65-5116-910a-7667aa3b03b5",
+              "fromPort": 0,
+              "toPort": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

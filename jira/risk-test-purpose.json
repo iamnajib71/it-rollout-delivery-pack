@@ -1,0 +1,6 @@
+{
+  "fictionalAdministrationTest": true,
+  "issue": "ITROLL-33",
+  "temporaryReviewDate": "2026-10-21",
+  "purpose": "Exercise scheduled overdue matcher using an explicitly fictional temporary test date; original values restored afterwards."
+}

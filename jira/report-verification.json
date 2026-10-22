@@ -1,0 +1,18 @@
+{
+  "source": "issues.csv",
+  "capturedAt": "2026-10-22T10:04:25.282669+00:00",
+  "independent": {
+    "stories": 25,
+    "risks": 4,
+    "uat": 1
+  },
+  "recalculationTest": "PASS: temporary status change restored",
+  "formulaScan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}",
+  "savedXlsxChecks": {
+    "cachedStories": 25,
+    "cachedDone": 0,
+    "cachedUat": 1,
+    "cachedOpenRisks": 4,
+    "nativeChartParts": 1
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": 2,
+  "name": "ITROLL board",
+  "type": "scrum",
+  "self": "https://iamnajib.atlassian.net/rest/agile/1.0/board/2/configuration",
+  "location": {
+    "type": "project",
+    "key": "ITROLL",
+    "id": "10001",
+    "self": "https://iamnajib.atlassian.net/rest/api/2/project/10001",
+    "name": "IT Rollout - Fictional Case Study"
+  },
+  "filter": {
+    "id": "10001",
+    "self": "https://iamnajib.atlassian.net/rest/api/2/filter/10001"
+  },
+  "columnConfig": {
+    "columns": [
+      {
+        "name": "To Do",
+        "statuses": [
+          {
+            "id": "10004",
+            "self": "https://iamnajib.atlassian.net/rest/api/2/status/10004"
+          }
+        ]
+      },
+      {
+        "name": "In Progress",
+        "statuses": [
+          {
+            "id": "3",
+            "self": "https://iamnajib.atlassian.net/rest/api/2/status/3"
+          }
+        ]
+      },
+      {
+        "name": "In UAT",
+        "statuses": [
+          {
+            "id": "10006",
+            "self": "https://iamnajib.atlassian.net/rest/api/2/status/10006"
+          }
+        ]
+      },
+      {
+        "name": "Done",
+        "statuses": [
+          {
+            "id": "10005",
+            "self": "https://iamnajib.atlassian.net/rest/api/2/status/10005"
+          }
+        ]
+      }
+    ],
+    "constraintType": "none"
+  },
+  "estimation": {
+    "type": "field",
+    "field": {
+      "fieldId": "customfield_10035",
+      "displayName": "Story Points"
+    }
+  },
+  "ranking": {
+    "rankCustomFieldId": 10019
+  }
+}

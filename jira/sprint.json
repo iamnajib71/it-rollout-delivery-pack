@@ -1,0 +1,11 @@
+{
+  "id": 2,
+  "self": "https://iamnajib.atlassian.net/rest/agile/1.0/sprint/2",
+  "state": "active",
+  "name": "Pilot 1 - fictional rollout",
+  "startDate": "2026-10-22T09:50:14.922Z",
+  "endDate": "2026-11-05T09:50:14.922Z",
+  "createdDate": "2026-10-22T09:43:36.727Z",
+  "originBoardId": 2,
+  "goal": "Prepare identity and least-privilege Finance pilot; fictional planning, no business UAT claimed."
+}

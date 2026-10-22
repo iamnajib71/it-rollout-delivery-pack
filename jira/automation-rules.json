@@ -1,0 +1,128 @@
+[
+  {
+    "rule": {
+      "name": "ITROLL - Assign UAT owner",
+      "state": "ENABLED",
+      "description": "Fictional case study run in a real Jira site. No email action.",
+      "canOtherRuleTrigger": false,
+      "notifyOnError": "FIRSTERROR",
+      "authorAccountId": "70121:4d2ba86c-bb4c-4ab2-b65c-92fb860ef393",
+      "actor": {
+        "type": "ACCOUNT_ID",
+        "actor": "70121:4d2ba86c-bb4c-4ab2-b65c-92fb860ef393"
+      },
+      "trigger": {
+        "component": "TRIGGER",
+        "schemaVersion": -1,
+        "type": "jira.issue.event.trigger:transitioned",
+        "value": {
+          "eventFilters": [
+            "ari:cloud:jira:84ab6c16-69d0-4b80-986a-72b1798a50cc:project/10001"
+          ],
+          "fromStatus": [],
+          "toStatus": [
+            {
+              "type": "ID",
+              "value": "10006"
+            }
+          ],
+          "eventKey": "jira:issue_updated",
+          "issueEvent": "issue_generic"
+        },
+        "connectionId": null,
+        "conditions": [],
+        "id": "b3cbb403-454d-423a-a534-5ac2587e3d9a"
+      },
+      "components": [
+        {
+          "component": "ACTION",
+          "schemaVersion": 12,
+          "type": "jira.issue.edit",
+          "value": {
+            "operations": [],
+            "advancedFields": "{\"fields\": {\"assignee\": {\"id\": \"70121:4d2ba86c-bb4c-4ab2-b65c-92fb860ef393\"}}}",
+            "sendNotifications": false
+          },
+          "connectionId": null,
+          "conditions": [],
+          "parentId": null,
+          "conditionParentId": null,
+          "children": [],
+          "id": "1f06e058-cbcc-412c-bb89-8730e362396a"
+        }
+      ],
+      "ruleScopeARIs": [
+        "ari:cloud:jira:84ab6c16-69d0-4b80-986a-72b1798a50cc:project/10001"
+      ],
+      "labels": [],
+      "writeAccessType": "OWNER_ONLY",
+      "collaborators": [],
+      "uuid": "01a16301-b2f7-70c9-aa5b-0d868ff0517e",
+      "created": 1792662418.167,
+      "updated": 1792662509.414
+    },
+    "connections": []
+  },
+  {
+    "rule": {
+      "name": "ITROLL - Flag overdue risk reviews",
+      "state": "ENABLED",
+      "description": "Fictional case study run in a real Jira site. No email action.",
+      "canOtherRuleTrigger": false,
+      "notifyOnError": "FIRSTERROR",
+      "authorAccountId": "70121:4d2ba86c-bb4c-4ab2-b65c-92fb860ef393",
+      "actor": {
+        "type": "ACCOUNT_ID",
+        "actor": "70121:4d2ba86c-bb4c-4ab2-b65c-92fb860ef393"
+      },
+      "trigger": {
+        "component": "TRIGGER",
+        "schemaVersion": 1,
+        "type": "jira.jql.scheduled",
+        "value": {
+          "schedule": {
+            "cronExpression": "",
+            "method": "BASIC",
+            "rate": 0,
+            "rateInterval": 86400,
+            "rRule": "BEGIN:VEVENT\nDTSTART;TZID=Australia/Sydney:20261022T080000\nRRULE:FREQ=DAILY;BYHOUR=8;BYMINUTE=0;BYSECOND=0;INTERVAL=1\nEND:VEVENT"
+          },
+          "jql": "project = ITROLL AND labels = risk AND due < startOfDay() AND statusCategory != Done AND labels not in (risk-review-overdue)",
+          "executionMode": "jql",
+          "onlyUpdatedIssues": false
+        },
+        "connectionId": null,
+        "conditions": [],
+        "id": "ef835fe7-0a07-4efc-8c62-f405d1bb36a5"
+      },
+      "components": [
+        {
+          "component": "ACTION",
+          "schemaVersion": 12,
+          "type": "jira.issue.edit",
+          "value": {
+            "operations": [],
+            "advancedFields": "{\"update\": {\"labels\": [{\"add\": \"risk-review-overdue\"}]}, \"fields\": {\"customfield_10021\": [{\"value\": \"Impediment\"}]}}",
+            "sendNotifications": false
+          },
+          "connectionId": null,
+          "conditions": [],
+          "parentId": null,
+          "conditionParentId": null,
+          "children": [],
+          "id": "54edf5f8-6fa9-4d45-8ac7-c2fe26f2b76a"
+        }
+      ],
+      "ruleScopeARIs": [
+        "ari:cloud:jira:84ab6c16-69d0-4b80-986a-72b1798a50cc:project/10001"
+      ],
+      "labels": [],
+      "writeAccessType": "OWNER_ONLY",
+      "collaborators": [],
+      "uuid": "01a16301-b5c0-7d93-aa97-0e81b5779a0a",
+      "created": 1792662418.88,
+      "updated": 1792662511.657
+    },
+    "connections": []
+  }
+]

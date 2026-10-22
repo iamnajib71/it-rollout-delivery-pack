@@ -1,0 +1,439 @@
+{
+  "status": "SOURCE_MANIFEST (execution recorded separately in state.json)",
+  "fictionalCaseStudy": true,
+  "records": [
+    {
+      "source": "epic-files",
+      "type": "Epic",
+      "summary": "Files",
+      "description": "Fictional case study: Files"
+    },
+    {
+      "source": "epic-identity",
+      "type": "Epic",
+      "summary": "Identity",
+      "description": "Fictional case study: Identity"
+    },
+    {
+      "source": "epic-monitoring",
+      "type": "Epic",
+      "summary": "Monitoring",
+      "description": "Fictional case study: Monitoring"
+    },
+    {
+      "source": "epic-printing",
+      "type": "Epic",
+      "summary": "Printing",
+      "description": "Fictional case study: Printing"
+    },
+    {
+      "source": "epic-remote",
+      "type": "Epic",
+      "summary": "Remote",
+      "description": "Fictional case study: Remote"
+    },
+    {
+      "source": "us-01",
+      "type": "Story",
+      "summary": "US-01: Create a starter account",
+      "requirement": "BR-01",
+      "epic": "epic-identity",
+      "points": 2,
+      "priority": "Medium",
+      "description": "As a service desk analyst, I want to create a starter account, so that a starter has a directory identity.\nRequirement: BR-01. Fictional office; scope: Approval simulated.\n\nAcceptance criteria\nGiven an approved starter request\nWhen the analyst creates a Staff user\nThen the user exists in the Staff OU.\n\nHistorical lab evidence (not current business-user UAT)\nPASS create user in Staff\nhttps://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/ad-tasks-20261006-155516-705.txt\nLimit: Approval simulated"
+    },
+    {
+      "source": "us-02",
+      "type": "Story",
+      "summary": "US-02: Reset password and require change",
+      "requirement": "BR-01",
+      "epic": "epic-identity",
+      "points": 2,
+      "priority": "Medium",
+      "description": "As a service desk analyst, I want to reset password and require change, so that temporary passwords must be replaced.\nRequirement: BR-01. Fictional office; scope: Flag verified; no Windows login.\n\nAcceptance criteria\nGiven an existing test account\nWhen its password is reset\nThen change at next logon is required.\n\nHistorical lab evidence (not current business-user UAT)\nPASS reset password and force change at next logon\nhttps://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/ad-tasks-20261006-155516-705.txt\nLimit: Flag verified; no Windows login"
+    },
+    {
+      "source": "us-03",
+      "type": "Story",
+      "summary": "US-03: Lock after five failed sign-ins",
+      "requirement": "BR-01",
+      "epic": "epic-identity",
+      "points": 3,
+      "priority": "Medium",
+      "description": "As a security owner, I want to lock after five failed sign-ins, so that password guessing is limited.\nRequirement: BR-01. Fictional office; scope: LDAP test.\n\nAcceptance criteria\nGiven a valid test account\nWhen five bad LDAP binds occur\nThen lockoutTime is set.\n\nHistorical lab evidence (not current business-user UAT)\nPASS five bad binds set lockoutTime\nhttps://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/ad-tasks-20261006-155516-705.txt\nLimit: LDAP test"
+    },
+    {
+      "source": "us-04",
+      "type": "Story",
+      "summary": "US-04: Reject correct password while locked",
+      "requirement": "BR-01",
+      "epic": "epic-identity",
+      "points": 2,
+      "priority": "Medium",
+      "description": "As a security owner, I want to reject correct password while locked, so that lockout is enforced.\nRequirement: BR-01. Fictional office; scope: LDAP test.\n\nAcceptance criteria\nGiven a locked test account\nWhen the correct password is used\nThen authentication is denied.\n\nHistorical lab evidence (not current business-user UAT)\nPASS locked account denies correct password\nhttps://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/ad-tasks-20261006-155516-705.txt\nLimit: LDAP test"
+    },
+    {
+      "source": "us-05",
+      "type": "Story",
+      "summary": "US-05: Unlock and authenticate",
+      "requirement": "BR-01",
+      "epic": "epic-identity",
+      "points": 2,
+      "priority": "Medium",
+      "description": "As a service desk analyst, I want to unlock and authenticate, so that authorised staff can recover access.\nRequirement: BR-01. Fictional office; scope: Approval simulated.\n\nAcceptance criteria\nGiven a locked test account\nWhen the analyst unlocks it\nThen authenticated LDAP search succeeds.\n\nHistorical lab evidence (not current business-user UAT)\nPASS unlock account and authenticate\nhttps://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/ad-tasks-20261006-155516-705.txt\nLimit: Approval simulated"
+    },
+    {
+      "source": "us-06",
+      "type": "Story",
+      "summary": "US-06: Assign directory Finance membership",
+      "requirement": "BR-01",
+      "epic": "epic-identity",
+      "points": 2,
+      "priority": "Medium",
+      "description": "As a service desk analyst, I want to assign directory finance membership, so that directory role membership is recorded.\nRequirement: BR-01. Fictional office; scope: Does not grant standalone SMB.\n\nAcceptance criteria\nGiven an approved Finance starter\nWhen GG-Finance is assigned\nThen the user appears in that group.\n\nHistorical lab evidence (not current business-user UAT)\nPASS add user to GG-Finance\nhttps://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/ad-tasks-20261006-155516-705.txt\nLimit: Does not grant standalone SMB"
+    },
+    {
+      "source": "us-07",
+      "type": "Story",
+      "summary": "US-07: Disable a directory leaver",
+      "requirement": "BR-02",
+      "epic": "epic-identity",
+      "points": 2,
+      "priority": "High",
+      "description": "As a service desk analyst, I want to disable a directory leaver, so that directory access ends at departure.\nRequirement: BR-02. Fictional office; scope: SMB/VPN separate.\n\nAcceptance criteria\nGiven an approved leaver request\nWhen the account is disabled\nThen the disable flag is set.\n\nHistorical lab evidence (not current business-user UAT)\nPASS disable leaver flag\nhttps://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/ad-tasks-20261006-155516-705.txt\nLimit: SMB/VPN separate"
+    },
+    {
+      "source": "us-08",
+      "type": "Story",
+      "summary": "US-08: Reject disabled account sign-in",
+      "requirement": "BR-02",
+      "epic": "epic-identity",
+      "points": 2,
+      "priority": "High",
+      "description": "As a security owner, I want to reject disabled account sign-in, so that leaver revocation is checked.\nRequirement: BR-02. Fictional office; scope: LDAP test.\n\nAcceptance criteria\nGiven a disabled account\nWhen an LDAP sign-in is attempted\nThen authentication is denied.\n\nHistorical lab evidence (not current business-user UAT)\nPASS disabled leaver denied authentication\nhttps://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/ad-tasks-20261006-155516-705.txt\nLimit: LDAP test"
+    },
+    {
+      "source": "us-09",
+      "type": "Story",
+      "summary": "US-09: Write and read Finance files",
+      "requirement": "BR-03",
+      "epic": "epic-files",
+      "points": 2,
+      "priority": "High",
+      "description": "As a Finance employee, I want to write and read finance files, so that Finance documents can be shared.\nRequirement: BR-03. Fictional office; scope: Standalone Samba.\n\nAcceptance criteria\nGiven Alice has finance membership\nWhen she writes and reads a file\nThen content is verified.\n\nHistorical lab evidence (not current business-user UAT)\nPASS Alice Finance write\nhttps://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/homelab-check-20261006-211239-566.txt\nLimit: Standalone Samba"
+    },
+    {
+      "source": "us-10",
+      "type": "Story",
+      "summary": "US-10: Deny Finance to non-Finance staff",
+      "requirement": "BR-03",
+      "epic": "epic-files",
+      "points": 2,
+      "priority": "High",
+      "description": "As a Finance manager, I want to deny finance to non-finance staff, so that confidential files remain restricted.\nRequirement: BR-03. Fictional office; scope: Standalone Samba.\n\nAcceptance criteria\nGiven Bob belongs to staff\nWhen he opens Finance\nThen access is denied.\n\nHistorical lab evidence (not current business-user UAT)\nPASS Bob Finance denied\nhttps://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/homelab-check-20261006-211239-566.txt\nLimit: Standalone Samba"
+    },
+    {
+      "source": "us-11",
+      "type": "Story",
+      "summary": "US-11: Use Public as Finance staff",
+      "requirement": "BR-03",
+      "epic": "epic-files",
+      "points": 2,
+      "priority": "High",
+      "description": "As a Finance employee, I want to use public as finance staff, so that Finance can collaborate across teams.\nRequirement: BR-03. Fictional office; scope: Standalone Samba.\n\nAcceptance criteria\nGiven Alice is authenticated\nWhen she writes and reads Public\nThen both operations succeed.\n\nHistorical lab evidence (not current business-user UAT)\nPASS alice Public read/write\nhttps://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/homelab-check-20261006-211239-566.txt\nLimit: Standalone Samba"
+    },
+    {
+      "source": "us-12",
+      "type": "Story",
+      "summary": "US-12: Use Public as general staff",
+      "requirement": "BR-03",
+      "epic": "epic-files",
+      "points": 2,
+      "priority": "High",
+      "description": "As a office employee, I want to use public as general staff, so that general staff can collaborate.\nRequirement: BR-03. Fictional office; scope: Standalone Samba.\n\nAcceptance criteria\nGiven Bob is authenticated\nWhen he writes and reads Public\nThen both operations succeed.\n\nHistorical lab evidence (not current business-user UAT)\nPASS bob Public read/write\nhttps://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/homelab-check-20261006-211239-566.txt\nLimit: Standalone Samba"
+    },
+    {
+      "source": "us-13",
+      "type": "Story",
+      "summary": "US-13: Complete a PDF print job",
+      "requirement": "BR-04",
+      "epic": "epic-printing",
+      "points": 3,
+      "priority": "Medium",
+      "description": "As a office employee, I want to complete a pdf print job, so that printed PDF output can be retrieved.\nRequirement: BR-04. Fictional office; scope: PDF output only.\n\nAcceptance criteria\nGiven Office-PDF is enabled\nWhen a test page is submitted\nThen IPP job-state is 9 and a PDF exists.\n\nHistorical lab evidence (not current business-user UAT)\nPASS PDF job completed (IPP job-state=9)\nhttps://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/homelab-check-20261006-211239-566.txt\nLimit: PDF output only"
+    },
+    {
+      "source": "us-14",
+      "type": "Story",
+      "summary": "US-14: View queues without admin access",
+      "requirement": "BR-04",
+      "epic": "epic-printing",
+      "points": 2,
+      "priority": "Medium",
+      "description": "As a office employee, I want to view queues without admin access, so that staff can check waiting jobs.\nRequirement: BR-04. Fictional office; scope: HTTP response.\n\nAcceptance criteria\nGiven CUPS is running\nWhen I request /printers\nThen HTTP 200 is returned.\n\nHistorical lab evidence (not current business-user UAT)\nGET /printers => HTTP 200\nhttps://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/homelab-check-20261006-211239-566.txt\nLimit: HTTP response"
+    },
+    {
+      "source": "us-15",
+      "type": "Story",
+      "summary": "US-15: Require admin authentication",
+      "requirement": "BR-04",
+      "epic": "epic-printing",
+      "points": 2,
+      "priority": "Medium",
+      "description": "As a security owner, I want to require admin authentication, so that anonymous users cannot change queues.\nRequirement: BR-04. Fictional office; scope: Local lab admin.\n\nAcceptance criteria\nGiven an anonymous client\nWhen it requests /admin/\nThen HTTP 401 is returned.\n\nHistorical lab evidence (not current business-user UAT)\nGET /admin/ without credentials => HTTP 401\nhttps://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/homelab-check-20261006-211239-566.txt\nLimit: Local lab admin"
+    },
+    {
+      "source": "us-16",
+      "type": "Story",
+      "summary": "US-16: Allow authenticated printer admin",
+      "requirement": "BR-04",
+      "epic": "epic-printing",
+      "points": 2,
+      "priority": "Medium",
+      "description": "As a service desk analyst, I want to allow authenticated printer admin, so that authorised operators can manage queues.\nRequirement: BR-04. Fictional office; scope: Local lab admin.\n\nAcceptance criteria\nGiven the print administrator credentials\nWhen the admin page is requested\nThen HTTP 200 is returned.\n\nHistorical lab evidence (not current business-user UAT)\nGET /admin/ as print => HTTP 200\nhttps://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/homelab-check-20261006-211239-566.txt\nLimit: Local lab admin"
+    },
+    {
+      "source": "us-17",
+      "type": "Story",
+      "summary": "US-17: Create and list a device peer",
+      "requirement": "BR-05",
+      "epic": "epic-remote",
+      "points": 2,
+      "priority": "High",
+      "description": "As a service desk analyst, I want to create and list a device peer, so that each device has individual access.\nRequirement: BR-05. Fictional office; scope: Profile delivery untested.\n\nAcceptance criteria\nGiven a test device request\nWhen a peer is created\nThen the peer appears with an address.\n\nHistorical lab evidence (not current business-user UAT)\nPOST /api/session => success; peer listed:\nhttps://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/homelab-check-20261006-211239-566.txt\nLimit: Profile delivery untested"
+    },
+    {
+      "source": "us-18",
+      "type": "Story",
+      "summary": "US-18: Revoke a device peer",
+      "requirement": "BR-02",
+      "epic": "epic-remote",
+      "points": 2,
+      "priority": "High",
+      "description": "As a service desk analyst, I want to revoke a device peer, so that revoked profiles are removed.\nRequirement: BR-02. Fictional office; scope: No lost-device incident claimed.\n\nAcceptance criteria\nGiven a temporary peer exists\nWhen the peer is deleted\nThen it is absent from the next list.\n\nHistorical lab evidence (not current business-user UAT)\nDELETE peer => success; absent on subsequent GET\nhttps://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/homelab-check-20261006-211239-566.txt\nLimit: No lost-device incident claimed"
+    },
+    {
+      "source": "us-19",
+      "type": "Story",
+      "summary": "US-19: Restore office route through VPN",
+      "requirement": "BR-05",
+      "epic": "epic-remote",
+      "points": 3,
+      "priority": "High",
+      "description": "As a remote employee, I want to restore office route through vpn, so that remote staff can reach office files.\nRequirement: BR-05. Fictional office; scope: Isolated Docker peer.\n\nAcceptance criteria\nGiven a handshake but missing office route\nWhen AllowedIPs includes 172.20.0.0/16 and the tunnel restarts\nThen route uses wg0 and Public listing succeeds.\n\nHistorical lab evidence (not current business-user UAT)\nPASS VPN routing restored; authenticated share listing succeeds\nhttps://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/support-cases-20261006-155525.txt\nLimit: Isolated Docker peer"
+    },
+    {
+      "source": "us-20",
+      "type": "Story",
+      "summary": "US-20: Repair starter Finance access",
+      "requirement": "BR-03",
+      "epic": "epic-files",
+      "points": 3,
+      "priority": "High",
+      "description": "As a service desk analyst, I want to repair starter finance access, so that approved starters can access Finance without widening permissions.\nRequirement: BR-03. Fictional office; scope: Approval simulated; transient test.\n\nAcceptance criteria\nGiven Public works but Finance denies a starter\nWhen finance membership is added and identity refreshed\nThen Finance write read and delete succeed.\n\nHistorical lab evidence (not current business-user UAT)\nPASS Finance starter fault reproduced and repaired\nhttps://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/support-cases-20261006-155525.txt\nLimit: Approval simulated; transient test"
+    },
+    {
+      "source": "us-21",
+      "type": "Story",
+      "summary": "US-21: Recover paused queues",
+      "requirement": "BR-04",
+      "epic": "epic-printing",
+      "points": 3,
+      "priority": "Medium",
+      "description": "As a service desk analyst, I want to recover paused queues, so that waiting jobs resume after maintenance.\nRequirement: BR-04. Fictional office; scope: Laser output untested.\n\nAcceptance criteria\nGiven both queues paused and a PDF job waiting\nWhen queues are enabled and accept jobs\nThen original job completes at state 9.\n\nHistorical lab evidence (not current business-user UAT)\nPASS original queued job completed (IPP job-state=9); both queues enabled\nhttps://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/support-cases-20261006-155525.txt\nLimit: Laser output untested"
+    },
+    {
+      "source": "us-22",
+      "type": "Story",
+      "summary": "US-22: Respond on monitoring console",
+      "requirement": "BR-06",
+      "epic": "epic-monitoring",
+      "points": 2,
+      "priority": "Medium",
+      "description": "As a service desk analyst, I want to respond on monitoring console, so that operators can inspect service availability.\nRequirement: BR-06. Fictional office; scope: Response only.\n\nAcceptance criteria\nGiven Kuma is running\nWhen the local console is requested\nThen HTTP 200 is returned.\n\nHistorical lab evidence (not current business-user UAT)\nPASS Uptime Kuma HTTP response\nhttps://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/homelab-check-20261006-211239-566.txt\nLimit: Response only"
+    },
+    {
+      "source": "us-23",
+      "type": "Story",
+      "summary": "US-23: Show six monitors UP",
+      "requirement": "BR-06",
+      "epic": "epic-monitoring",
+      "points": 2,
+      "priority": "Medium",
+      "description": "As a service desk analyst, I want to show six monitors up, so that operators can identify unavailable services.\nRequirement: BR-06. Fictional office; scope: Point in time; no SLA.\n\nAcceptance criteria\nGiven the six office monitors exist\nWhen the status heartbeat is checked\nThen all six latest heartbeats are UP.\n\nHistorical lab evidence (not current business-user UAT)\nGET /api/status-page/heartbeat/office => 6 monitors, all UP\nhttps://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/homelab-check-20261006-211239-566.txt\nLimit: Point in time; no SLA"
+    },
+    {
+      "source": "us-24",
+      "type": "Story",
+      "summary": "US-24: Open office dashboard",
+      "requirement": "BR-06",
+      "epic": "epic-monitoring",
+      "points": 2,
+      "priority": "Medium",
+      "description": "As a office employee, I want to open office dashboard, so that office links are available from one place.\nRequirement: BR-06. Fictional office; scope: Usability untested.\n\nAcceptance criteria\nGiven Homepage is running\nWhen the local dashboard is requested\nThen HTTP 200 is returned.\n\nHistorical lab evidence (not current business-user UAT)\nPASS Office dashboard (Homepage) responds\nhttps://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/homelab-check-20261006-211239-566.txt\nLimit: Usability untested"
+    },
+    {
+      "source": "us-25",
+      "type": "Story",
+      "summary": "US-25: Clean up temporary test accounts",
+      "requirement": "BR-07",
+      "epic": "epic-identity",
+      "points": 2,
+      "priority": "Medium",
+      "description": "As a service desk analyst, I want to clean up temporary test accounts, so that test access is not retained.\nRequirement: BR-07. Fictional office; scope: AD cleanup.\n\nAcceptance criteria\nGiven the directory exercise is complete\nWhen cleanup runs\nThen the temporary account is removed.\n\nHistorical lab evidence (not current business-user UAT)\nPASS temporary account removed\nhttps://github.com/iamnajib71/it-support-homelab/blob/e33df8d0ec8dc2148438d379fc69e57701d7baf8/docs/evidence/ad-tasks-20261006-155516-705.txt\nLimit: AD cleanup"
+    },
+    {
+      "source": "r-01",
+      "type": "Task",
+      "summary": "R-01: AD disable leaves SMB/VPN active",
+      "risk": "High",
+      "labels": [
+        "raid",
+        "risk",
+        "source-status-open"
+      ],
+      "description": "Fictional case study RAID item. Source state is preserved below; Jira starts in To Do.\nID: R-01\nType: Risk\nDescription: AD disable leaves SMB/VPN active\nFictional owner: IT\nImpact: High\nStatus: Open\nBasis: Independent identities\nNext action: Three-path revocation checklist\nDue / gate: Before production\nEscalate to: SO\nNo review date is invented from a textual gate. Set a real review due date before enabling overdue automation."
+    },
+    {
+      "source": "r-02",
+      "type": "Task",
+      "summary": "R-02: Single host failure stops office",
+      "risk": "High",
+      "labels": [
+        "raid",
+        "risk",
+        "source-status-open"
+      ],
+      "description": "Fictional case study RAID item. Source state is preserved below; Jira starts in To Do.\nID: R-02\nType: Risk\nDescription: Single host failure stops office\nFictional owner: IT\nImpact: High\nStatus: Open\nBasis: No redundancy\nNext action: Off-host backups and restore rehearsal\nDue / gate: Before production\nEscalate to: SP\nNo review date is invented from a textual gate. Set a real review due date before enabling overdue automation."
+    },
+    {
+      "source": "r-03",
+      "type": "Task",
+      "summary": "R-03: HTTP availability masks print failure",
+      "risk": "Medium",
+      "labels": [
+        "raid",
+        "risk",
+        "source-status-mitigated-in-lab"
+      ],
+      "description": "Fictional case study RAID item. Source state is preserved below; Jira starts in To Do.\nID: R-03\nType: Risk\nDescription: HTTP availability masks print failure\nFictional owner: IT\nImpact: Medium\nStatus: Mitigated in lab\nBasis: CR-001\nNext action: Job-state / output tests\nDue / gate: 6 Oct evidence\nEscalate to: PC\nNo review date is invented from a textual gate. Set a real review due date before enabling overdue automation."
+    },
+    {
+      "source": "r-04",
+      "type": "Task",
+      "summary": "R-04: Public exposure without hardening",
+      "risk": "High",
+      "labels": [
+        "raid",
+        "risk",
+        "source-status-open"
+      ],
+      "description": "Fictional case study RAID item. Source state is preserved below; Jira starts in To Do.\nID: R-04\nType: Risk\nDescription: Public exposure without hardening\nFictional owner: SO\nImpact: High\nStatus: Open\nBasis: Loopback lab only\nNext action: Production security review\nDue / gate: Before production\nEscalate to: SP\nNo review date is invented from a textual gate. Set a real review due date before enabling overdue automation."
+    },
+    {
+      "source": "a-01",
+      "type": "Task",
+      "summary": "A-01: 15 staff need new endpoints",
+      "risk": "Medium",
+      "labels": [
+        "raid",
+        "assumption",
+        "source-status-unvalidated"
+      ],
+      "description": "Fictional case study RAID item. Source state is preserved below; Jira starts in To Do.\nID: A-01\nType: Assumption\nDescription: 15 staff need new endpoints\nFictional owner: SP\nImpact: Medium\nStatus: Unvalidated\nBasis: Fictional budget\nNext action: Confirm real inventory\nDue / gate: Baseline review\nEscalate to: PC\nNo review date is invented from a textual gate. Set a real review due date before enabling overdue automation."
+    },
+    {
+      "source": "a-02",
+      "type": "Task",
+      "summary": "A-02: Hardware available for pilot",
+      "risk": "Medium",
+      "labels": [
+        "raid",
+        "assumption",
+        "source-status-unvalidated"
+      ],
+      "description": "Fictional case study RAID item. Source state is preserved below; Jira starts in To Do.\nID: A-02\nType: Assumption\nDescription: Hardware available for pilot\nFictional owner: PC\nImpact: Medium\nStatus: Unvalidated\nBasis: Schedule baseline\nNext action: Quote lead times / rebaseline\nDue / gate: 12 Oct proposed\nEscalate to: SP\nNo review date is invented from a textual gate. Set a real review due date before enabling overdue automation."
+    },
+    {
+      "source": "i-01",
+      "type": "Task",
+      "summary": "I-01: No physical printer output evidence",
+      "risk": "High",
+      "labels": [
+        "raid",
+        "issue",
+        "source-status-open"
+      ],
+      "description": "Fictional case study RAID item. Source state is preserved below; Jira starts in To Do.\nID: I-01\nType: Issue\nDescription: No physical printer output evidence\nFictional owner: IT\nImpact: High\nStatus: Open\nBasis: Laser simulated\nNext action: Test real device\nDue / gate: Before production\nEscalate to: UR\nNo review date is invented from a textual gate. Set a real review due date before enabling overdue automation."
+    },
+    {
+      "source": "i-02",
+      "type": "Task",
+      "summary": "I-02: No 15-person UAT / capacity run",
+      "risk": "High",
+      "labels": [
+        "raid",
+        "issue",
+        "source-status-open"
+      ],
+      "description": "Fictional case study RAID item. Source state is preserved below; Jira starts in To Do.\nID: I-02\nType: Issue\nDescription: No 15-person UAT / capacity run\nFictional owner: PC\nImpact: High\nStatus: Open\nBasis: Component evidence only\nNext action: Staffed pilot / concurrency tests\nDue / gate: Before production\nEscalate to: SP\nNo review date is invented from a textual gate. Set a real review due date before enabling overdue automation."
+    },
+    {
+      "source": "i-03",
+      "type": "Task",
+      "summary": "I-03: No scheduled backup / restore result",
+      "risk": "High",
+      "labels": [
+        "raid",
+        "issue",
+        "source-status-open"
+      ],
+      "description": "Fictional case study RAID item. Source state is preserved below; Jira starts in To Do.\nID: I-03\nType: Issue\nDescription: No scheduled backup / restore result\nFictional owner: IT\nImpact: High\nStatus: Open\nBasis: Runbook procedure only\nNext action: Implement and verify isolated restore\nDue / gate: Before production\nEscalate to: SO\nNo review date is invented from a textual gate. Set a real review due date before enabling overdue automation."
+    },
+    {
+      "source": "d-01",
+      "type": "Task",
+      "summary": "D-01: Real access-model approvals",
+      "risk": "High",
+      "labels": [
+        "raid",
+        "dependency",
+        "source-status-pending"
+      ],
+      "description": "Fictional case study RAID item. Source state is preserved below; Jira starts in To Do.\nID: D-01\nType: Dependency\nDescription: Real access-model approvals\nFictional owner: SP\nImpact: High\nStatus: Pending\nBasis: Fictional approvals only\nNext action: Obtain real approvals\nDue / gate: Before production\nEscalate to: FM\nNo review date is invented from a textual gate. Set a real review due date before enabling overdue automation."
+    },
+    {
+      "source": "d-02",
+      "type": "Task",
+      "summary": "D-02: Windows Docker / Python for lab rerun",
+      "risk": "Medium",
+      "labels": [
+        "raid",
+        "dependency",
+        "source-status-historical-environment-confirmed"
+      ],
+      "description": "Fictional case study RAID item. Source state is preserved below; Jira starts in To Do.\nID: D-02\nType: Dependency\nDescription: Windows Docker / Python for lab rerun\nFictional owner: IT\nImpact: Medium\nStatus: Historical environment confirmed\nBasis: Source results\nNext action: Check prerequisites each rerun\nDue / gate: Each lab run\nEscalate to: PC\nNo review date is invented from a textual gate. Set a real review due date before enabling overdue automation."
+    },
+    {
+      "source": "d-03",
+      "type": "Task",
+      "summary": "D-03: Persistent Samba provisioning",
+      "risk": "High",
+      "labels": [
+        "raid",
+        "dependency",
+        "source-status-pending"
+      ],
+      "description": "Fictional case study RAID item. Source state is preserved below; Jira starts in To Do.\nID: D-03\nType: Dependency\nDescription: Persistent Samba provisioning\nFictional owner: IT\nImpact: High\nStatus: Pending\nBasis: Transient support test\nNext action: Record Compose and retest recreation\nDue / gate: Before production\nEscalate to: HR\nNo review date is invented from a textual gate. Set a real review due date before enabling overdue automation."
+    },
+    {
+      "source": "cr-001",
+      "type": "Task",
+      "summary": "CR-001: prove printing beyond HTTP",
+      "labels": [
+        "change-request"
+      ],
+      "description": "# CR-001: prove printing beyond HTTP\n\n> Fictional office and people. Planning and approvals are case-study simulations; technical results are historical lab evidence only.\n\nWorked fictional change: IT requests, PC reviews, SP scenario approves. This models control of the plan; no real historical approval claimed.\n\n## Trigger and options\nHTTP 200 can coexist with paused queues. Add queue checks, PDF artifact, IPP state 9 and paused-queue recovery. A: HTTP alone, rejected as inadequate. B: PDF plus recovery, selected. C: physical printer, separate prerequisite. Keep laser simulated.\n\n## Impact and decision\nEstimated 4h at AUD75 = AUD300, inside existing 80h labour allowance; baseline cost increase AUD0. One day within readiness allowance, no milestone movement. Reduces false green printing risk; no host exposure or Finance ACL change. SP scenario approves B; I-01 stays open.\n\n## Implementation and verification\nUpdate BR-04, US-13 / US-21, UAT-13 / UAT-21 and maintenance checklist. Historical homelab-check-20261006-211239-566.txt proves PDF artifact/state 9; support-cases-20261006-155525.txt proves original job recovery. These runs predate the illustrative CR. PC checks exact RTM proof. Closed for lab criteria on 9 October 2026; physical printing remains unproven.\n"
+    }
+  ]
+}

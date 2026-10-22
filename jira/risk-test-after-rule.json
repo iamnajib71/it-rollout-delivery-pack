@@ -1,0 +1,25 @@
+{
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations",
+  "id": "10032",
+  "self": "https://iamnajib.atlassian.net/rest/api/3/issue/10032",
+  "key": "ITROLL-33",
+  "fields": {
+    "duedate": "2026-10-21",
+    "customfield_10021": [
+      {
+        "self": "https://iamnajib.atlassian.net/rest/api/3/customFieldOption/10019",
+        "value": "Impediment",
+        "id": "10019"
+      }
+    ],
+    "labels": [
+      "fictional-case-study",
+      "raid",
+      "risk",
+      "risk-review-overdue",
+      "rollout-delivery-pack",
+      "source-r-03",
+      "source-status-mitigated-in-lab"
+    ]
+  }
+}

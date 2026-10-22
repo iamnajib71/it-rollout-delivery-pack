@@ -1,0 +1,6 @@
+{
+  "capturedAt": "2026-10-22T10:04:24.885256+00:00",
+  "site": "https://iamnajib.atlassian.net",
+  "status": "AUTHENTICATED",
+  "operation": "GET /rest/api/3/myself"
+}

@@ -1,0 +1,166 @@
+{
+  "statuses": [
+    {
+      "id": "10004",
+      "statusReference": "10004",
+      "name": "To Do",
+      "statusCategory": "TODO",
+      "scope": {
+        "type": "GLOBAL"
+      },
+      "description": ""
+    },
+    {
+      "id": "10005",
+      "statusReference": "10005",
+      "name": "Done",
+      "statusCategory": "DONE",
+      "scope": {
+        "type": "GLOBAL"
+      },
+      "description": ""
+    },
+    {
+      "id": "3",
+      "statusReference": "3",
+      "name": "In Progress",
+      "statusCategory": "IN_PROGRESS",
+      "scope": {
+        "type": "GLOBAL"
+      },
+      "description": ""
+    },
+    {
+      "id": "10006",
+      "statusReference": "10006",
+      "name": "In UAT",
+      "statusCategory": "IN_PROGRESS",
+      "scope": {
+        "type": "GLOBAL"
+      },
+      "description": ""
+    }
+  ],
+  "workflows": [
+    {
+      "scope": {
+        "type": "GLOBAL"
+      },
+      "version": {
+        "versionNumber": 0,
+        "id": "123fefe0-be78-4160-b3d2-77b7c0c71576"
+      },
+      "id": "40642420-c64f-4615-9f45-2ff006e37f2f",
+      "name": "ITROLL - Rollout UAT workflow",
+      "description": "Fictional case study; sequential acceptance workflow",
+      "isEditable": true,
+      "startPointLayout": {},
+      "statuses": [
+        {
+          "statusReference": "10004",
+          "layout": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "properties": {},
+          "deprecated": false
+        },
+        {
+          "statusReference": "3",
+          "layout": {
+            "x": 200.0,
+            "y": 0.0
+          },
+          "properties": {},
+          "deprecated": false
+        },
+        {
+          "statusReference": "10006",
+          "layout": {
+            "x": 400.0,
+            "y": 0.0
+          },
+          "properties": {},
+          "deprecated": false
+        },
+        {
+          "statusReference": "10005",
+          "layout": {
+            "x": 600.0,
+            "y": 0.0
+          },
+          "properties": {},
+          "deprecated": false
+        }
+      ],
+      "transitions": [
+        {
+          "id": "1",
+          "type": "INITIAL",
+          "toStatusReference": "10004",
+          "links": [],
+          "name": "Create",
+          "description": "",
+          "actions": [],
+          "validators": [],
+          "triggers": [],
+          "properties": {}
+        },
+        {
+          "id": "11",
+          "type": "DIRECTED",
+          "toStatusReference": "3",
+          "links": [
+            {
+              "fromStatusReference": "10004",
+              "fromPort": 0,
+              "toPort": 1
+            }
+          ],
+          "name": "Start work",
+          "description": "",
+          "actions": [],
+          "validators": [],
+          "triggers": [],
+          "properties": {}
+        },
+        {
+          "id": "21",
+          "type": "DIRECTED",
+          "toStatusReference": "10006",
+          "links": [
+            {
+              "fromStatusReference": "3",
+              "fromPort": 0,
+              "toPort": 1
+            }
+          ],
+          "name": "Send to UAT",
+          "description": "",
+          "actions": [],
+          "validators": [],
+          "triggers": [],
+          "properties": {}
+        },
+        {
+          "id": "31",
+          "type": "DIRECTED",
+          "toStatusReference": "10005",
+          "links": [
+            {
+              "fromStatusReference": "10006",
+              "fromPort": 0,
+              "toPort": 1
+            }
+          ],
+          "name": "Accept",
+          "description": "",
+          "actions": [],
+          "validators": [],
+          "triggers": [],
+          "properties": {}
+        }
+      ]
+    }
+  ]
+}
