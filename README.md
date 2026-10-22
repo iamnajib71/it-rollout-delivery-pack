@@ -1,31 +1,38 @@
-An IT rollout case study covering delivery planning, change control, requirements analysis and service transition for a fictional 15-person office.
+# IT Rollout Delivery Pack
 
-<!-- project-overview:start -->
-## Project overview
+I turned a working office homelab into a fictional rollout case study with requirements, delivery controls and acceptance evidence that a coordinator or analyst can trace.
 
-| Area | What to look for |
+![Actual pack validation, PDF export and evidence review](docs/demo.gif)
+
+[![CI](https://github.com/iamnajib71/it-rollout-delivery-pack/actions/workflows/ci.yml/badge.svg)](https://github.com/iamnajib71/it-rollout-delivery-pack/actions/workflows/ci.yml) · [MIT licence](LICENSE)
+
+## At a glance
+
+| Area | Evidence-backed summary |
 | --- | --- |
-| **Problem addressed** | A small-office rollout needs agreed scope, assigned owners, testable requirements, controlled changes and an operational handover. |
-| **Implemented work** | Produced a fictional 15-person office delivery pack: charter, WBS, schedule, RAID, worked change control, BRD, 25 traced stories, UAT material, cutover, rollback and handover. Linked it to dated homelab evidence. |
-| **Skills demonstrated** | Delivery planning, requirements analysis, process mapping, Jira import preparation, change control, traceability, UAT and service transition. |
-| **Demo** | [Watch validation, PDF export and evidence review](docs/demo.gif), or [browse the case study](https://iamnajib71.github.io/it-rollout-delivery-pack/). |
-| **How to use it** | [Quick start](#quick-start---windows): validate the source, build the PDF and inspect a story with `scripts/show_evidence.py`. Expected: reproducible document exports and traceable evidence links. |
-| **Verification** | [Results and evidence](#results-and-evidence) and [verification](docs/verification.md). Office approvals and delivery dates are fictional; the source lab outputs are real historical records. |
+| **The problem** | A fictional 15-person office relies on local accounts, ad hoc file copies and informal remote-access requests; staff and support lose time to unclear access and ownership. [The charter](initiation/charter.md) labels this as an assumed scenario. |
+| **What I built** | I wrote the charter, requirements, process maps, backlog, schedule, budget, RAID and transition pack, and mapped acceptance claims to historical homelab evidence. |
+| **Results** | [25 story/UAT evidence mappings and 14 exact source hashes validated](docs/verification.md); [3 historical support faults reproduced and repaired](evidence/homelab/docs/evidence/support-cases-20261006-155525.txt). Planning and approvals are fictional; this is not business-user UAT. |
+| **Skills shown** | Business analysis, requirements gathering, process mapping, user stories, acceptance criteria, requirements traceability, UAT planning, RACI, RAID, change control and project coordination. |
+| **Relevant roles** | IT Project Coordinator, PMO Analyst, Junior Business Analyst, UAT Analyst. |
+| **How it was built** | Designed, specified and reviewed by me; built with Codex as my coding agent (vibe coding). Verification and its limits are linked below. |
+| **Try it / evidence** | [Live case study](https://iamnajib71.github.io/it-rollout-delivery-pack/) · [PDF pack](pack/IT-Rollout-Delivery-Pack.pdf) · [Traceability](business-analysis/traceability.csv) · [Verification](docs/verification.md) |
 
-<!-- project-overview:end -->
+## What I did, step by step
 
-![36-second local terminal demo: validate, export PDF and review real evidence](docs/demo.gif)
+1. Defined the fictional office, scope, exclusions and decision owners in the [charter](initiation/charter.md).
+2. Inspected the existing lab rather than claiming stakeholder interviews; wrote the [BRD](business-analysis/brd.md), process maps and acceptance stories.
+3. Prepared the [work breakdown](planning/wbs.csv), schedule, budget, RACI and communications baseline.
+4. Worked through a simulated change request and status reports, keeping assumptions separate from measured technical results.
+5. Mapped each story to specific historical checks and an explicit limit, then planned UAT, cutover, rollback and handover.
+6. Validated hashes, mappings, links and arithmetic, exported the PDF and repeated the documented build from a [clean public clone](docs/verification.md).
 
-[![CI](https://github.com/iamnajib71/it-rollout-delivery-pack/actions/workflows/ci.yml/badge.svg)](https://github.com/iamnajib71/it-rollout-delivery-pack/actions/workflows/ci.yml) ![MIT licence](https://img.shields.io/badge/licence-MIT-blue) ![Markdown and Python](https://img.shields.io/badge/language-Markdown%20%2F%20Python-blue)
+## Problems I hit and how I solved them
 
-[**Live demo**](https://iamnajib71.github.io/it-rollout-delivery-pack/) - browse the case study and download the PDF.
+- **Windows checkout conversion could change evidence bytes:** preserved evidence line endings and binary exports with Git attributes so the manifest still validates after cloning. [Verification record](docs/verification.md) · [fixing commit](https://github.com/iamnajib71/it-rollout-delivery-pack/commit/db1bb48).
+- **A component check does not prove an entire office rollout:** qualified the story mappings and left real-office go-live on hold for untested requirements. [Lessons learned](closure/lessons-learned.md) · [acceptance limits](business-analysis/brd.md).
 
-## Technical capabilities
-- **Delivery planning:** charter, WBS, milestones, communications, cutover and handover with owners.
-- **Project controls:** RACI, cost estimate, RAID, worked change control and three fictional weekly RAG reports.
-- **Requirements analysis:** six process maps, 25 Given/When/Then stories, BRD and qualified requirements traceability.
-
-## Start here - two minutes
+## Start here
 | Review | Artefact |
 |---|---|
 | Scope and people | [Charter](initiation/charter.md), [stakeholders](initiation/stakeholders.csv), [RACI](initiation/raci-guide.md) |
@@ -73,7 +80,7 @@ python -m venv .venv
 .\.venv\Scripts\python.exe scripts/build_site.py
 .\.venv\Scripts\python.exe scripts/show_evidence.py --story US-19
 ```
-Open the PDF and GIF using the links above. The PDF command reads all delivery Markdown and CSV sources. Mermaid source is preserved legibly in the PDF; GitHub renders it graphically. The recorder saves actual output in asciicast v2 `docs/demo.cast`; the published GIF uses asciinema's **agg** renderer. With `--agg PATH_TO_AGG`, regeneration uses agg; the default portable Pillow renderer keeps the quick start self-contained. Recording takes about 35 seconds. [Verification](docs/verification.md).
+Open the PDF and GIF using the links above. The PDF command reads all delivery Markdown and CSV sources. Mermaid source is preserved legibly in the PDF; GitHub renders it graphically. The recorder saves actual output in asciicast v2 `docs/demo.cast`; the published GIF uses asciinema's **agg** renderer. With `--agg PATH_TO_AGG`, regeneration uses agg; the default portable Pillow renderer keeps the quick start self-contained. [Verification](docs/verification.md).
 
 ## Results and evidence
 | Real historical result | Value | Source |
@@ -90,4 +97,6 @@ Open the PDF and GIF using the links above. The PDF command reads all delivery M
 ## Honest limits
 Office, people, approvals, budget, schedule and reports are fictional. Evidence dates are real. This is retrospective lab acceptance, not business-user UAT or production deployment. No public VPN, MFA, Windows domain join, AD-integrated shares, physical laser, scheduled backup, proven restore or 15-user load test. Epic Link stays blank until real Jira keys exist. Real-office go-live remains on hold. Screenshots are historical source captures. Social preview upload is a manual Settings step for Nazmul.
 
-Built by Nazmul Hassan: [LinkedIn](https://www.linkedin.com/in/iamnajib71) | [GitHub](https://github.com/iamnajib71)
+## Built by Nazmul Hassan
+
+[LinkedIn](https://www.linkedin.com/in/iamnajib71) · [GitHub](https://github.com/iamnajib71)
