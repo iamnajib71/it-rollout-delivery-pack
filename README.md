@@ -15,7 +15,6 @@ I built a fictional office rollout case study in a real Jira Cloud site, connect
 | **Results** | [43 Jira issues: 5 epics, 25 stories, 12 RAID tasks and 1 change request](jira/issues.csv); [2 enabled automation rules](jira/automation-rules.json). [A verified rerun kept the same issue keys](jira/verification.md). The fictional case study has no business-user UAT or production completion claim. |
 | **Skills shown** | Jira Administration, Jira Cloud REST API, Scrum, JQL, Jira Automation, dashboards, Excel reporting, requirements gathering, acceptance criteria, requirements traceability, UAT, RAID, change control and project coordination. |
 | **Relevant roles** | Jira Administrator, Tools and Reporting Analyst, Project Coordinator, Business Analyst. |
-| **How it was built** | Designed, specified and reviewed by me; built with Codex as my coding agent (vibe coding). Verification and its limits are linked below. |
 | **Try it / evidence** | [Jira board capture](jira/screenshots/board.png) · [Dashboard capture](jira/screenshots/dashboard.png) · [Excel report](jira/status-report.xlsx) · [Run in Jira](#run-in-jira) · [Live case study](https://iamnajib71.github.io/it-rollout-delivery-pack/) |
 
 ## What I did, step by step
