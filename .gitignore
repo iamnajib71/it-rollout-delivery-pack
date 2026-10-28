@@ -3,6 +3,4 @@
 __pycache__/
 tmp/
 *.pyc
-CLAUDE.md
-AGENTS.md
 CONTRIBUTING.md
